@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="#613B6D"
+             
+             NavigationPage.HasNavigationBar="False"
+             x:Class="AwesomeApp.View.PageMenu">
+
+    <!--Balise Style pour le design-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <Style x:Key="LargeButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#aa007f"/>
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderRadius" Value="20"/>
+                <Setter Property="FontSize" Value="Title" />
+                <Setter Property="Padding" Value="15" />
+                <Setter Property="Margin" Value="3"/>
+            </Style>
+
+            <Style x:Key="TextMenu" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="60"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                <Setter Property="TextType" Value="Text"/>
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+
+
+    <!--corp de la page-->
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid x:Name="controlGrid" RowSpacing="1" ColumnSpacing="1">
+                
+            <Grid.RowDefinitions>
+                <RowDefinition Height="110" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <!--<RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />-->
+            </Grid.RowDefinitions>
+                
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            
+                <Label Text="PhotoBooth" Grid.Row="0" Grid.ColumnSpan="3" Style="{StaticResource TextMenu}" ></Label>
+
+                <Button x:Name="GoEvent"  ImageSource="@drawable/Agenda3.ico"  Grid.Row="1" Grid.ColumnSpan="3"  Clicked="GoEvent_Clicked" Text="Evenement"
+        Style="{StaticResource LargeButton}"></Button>
+
+                <Button x:Name="GoProfil" ImageSource="@mipmap/Profile4.ico" Grid.Row="2" Grid.ColumnSpan="3" Clicked="GoProfil_Clicked" Text="Profil"
+        Style="{StaticResource LargeButton}"></Button>
+
+                <Button x:Name="GoScan" ImageSource="@mipmap/PhotosScan.ico" Grid.Row="3" Grid.ColumnSpan="3" Clicked="GoScan_Clicked" Text="Scanner"
+        Style="{StaticResource LargeButton}"></Button>
+
+                <Button ImageSource="@mipmap/logout" Grid.Row="4" Grid.ColumnSpan="3" Clicked="GoDeco_Clicked" Text="Deconnexion"
+        Style="{StaticResource LargeButton}" />
+
+            <!--<Button ImageSource="@mipmap/Photo3" Grid.Row="5" Grid.ColumnSpan="3"
+        Style="{StaticResource LargeButton}" />
+
+            <Button ImageSource="@mipmap/Photo3" Grid.Row="6" Grid.ColumnSpan="3"
+        Style="{StaticResource LargeButton}" />-->
+
+                
+        </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

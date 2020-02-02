@@ -1,0 +1,11 @@
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp\bin\Release\netstandard2.0\AwesomeApp.deps.json
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp\bin\Release\netstandard2.0\AwesomeApp.dll
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp\bin\Release\netstandard2.0\AwesomeApp.pdb
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp\obj\Release\netstandard2.0\AwesomeApp.csprojAssemblyReference.cache
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp\obj\Release\netstandard2.0\App.xaml.g.cs
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp\obj\Release\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp\obj\Release\netstandard2.0\AwesomeApp.AssemblyInfoInputs.cache
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp\obj\Release\netstandard2.0\AwesomeApp.AssemblyInfo.cs
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp\obj\Release\netstandard2.0\XamlC.stamp
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp\obj\Release\netstandard2.0\AwesomeApp.dll
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp\obj\Release\netstandard2.0\AwesomeApp.pdb

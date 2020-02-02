@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+           BackgroundColor="#613B6D"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="AwesomeApp.View.PageEvent">
+
+
+    <!--Balise Style pour le design-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+
+            <Style x:Key="StyleImage1" TargetType="Image">
+                <Setter Property="HeightRequest" Value="120" />
+                <Setter Property="WidthRequest" Value="120" />
+            </Style>
+
+            <Style x:Key="StyleLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Title" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Key="StyleImage2" TargetType="ImageButton">
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="WidthRequest" Value="50" />
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <!--corp de la page-->
+    <ContentPage.Content>
+     
+        <ScrollView>
+            <Grid Margin="16">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <StackLayout Grid.Row="0">
+
+                </StackLayout>
+
+                
+                <!--Grid n°1 avec Image plus Titre de la page-->
+                <StackLayout Grid.Row="1">
+                    <Image Source="@drawable/Agenda3"  Style="{StaticResource StyleImage1}"></Image>
+                    <Label Text="Evenement" Style="{StaticResource StyleLabel}"/>
+
+                </StackLayout>
+
+                <!--Grid n°2 pour le contenue de la page-->
+                <StackLayout Grid.Row="2">
+
+                    <Label Text="Bientôt disponible!"
+                       TextColor="White" FontSize="Title"
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand">
+                        
+                    </Label>
+
+                </StackLayout>
+
+                    <!--<StackLayout Grid.Row="3">
+
+                    </StackLayout>-->
+
+                <!--Grid n°4 avec ImageBouton pour retourner à la page Menu-->
+                <StackLayout Grid.Row="4">
+
+                    <ImageButton Source="@drawable/Home.ico"
+                        VerticalOptions="CenterAndExpand"
+                        Style="{StaticResource StyleImage2}"
+                        FlexLayout.AlignSelf="Center"
+                        Clicked="GoPageHome2_Clicked">
+                    </ImageButton> 
+
+                </StackLayout>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
