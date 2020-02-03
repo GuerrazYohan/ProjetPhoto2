@@ -1,0 +1,61 @@
+
+
+.Signin {
+  margin-top: 2%;
+  margin-left: 20%;
+}
+
+.Signin .card {
+  background: rgba(0, 0, 0, .6);
+}
+
+.Signin label {
+  color: white;
+  font-size: 20px;
+}
+
+.Signin input {
+  color: white;
+}
+
+.btn_home {
+  margin: 1%;
+}
+
+.login {
+  margin-top: 4%;
+  margin-left: 10%;
+}
+
+.login .card {
+  background: rgba(0, 0, 0, .6);
+}
+
+.login label {
+  color: white;
+  font-size: 20px;
+}
+
+.login input {
+  color: white;
+}
+#Body1
+{
+    background-image: url(../img/bg_2.jpg);
+}
+
+#Body2
+{
+  background-image: url(../img/bg_3.jpg);
+}
+.checkbox_remember[type="checkbox"]:checked + span:not(.lever):before{
+  border-bottom: 2px solid #8e24aa;
+  border-right: 2px solid #8e24aa;
+  background: transparent;
+}
+#bg_dash{
+  background-color: purple;
+}
+.dropdown-content li > a, .dropdown-content li > span {
+    color: #fb8c00 !important;
+}

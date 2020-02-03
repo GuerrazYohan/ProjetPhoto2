@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/materialize.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper deep-purple darken-1">
+      <a href="#" class="brand-logo center">Bienvenue</a>
+      <!-- Dropdown Trigger -->
+      <ul class="left hide-on-med-and-down">
+      <li><a class='dropdown-trigger btn deep-purple darken-3' href='#' data-target='dropdown1'><i class="material-icons left">grade</i>Mes évenements</a></li>
+    </ul>
+      <!-- Dropdown Structure -->
+      <ul id='dropdown1' class='dropdown-content'>
+        <li><a href="#!" class="deep-purple-text">Mariage Thibault</a></li>
+        <li><a href="#!" class="deep-purple-text">Anniversaire Josephine</a></li>
+        <li class="divider" tabindex="-1"></li>
+        <li><a href="#!" class="deep-purple-text"><i class="material-icons right">add</i>Ajouter un évenements</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="waves-effect waves-dark deep-purple darken-3 btn" href="#"><i class="material-icons right">account_box</i>Mon profil</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container center" id="bg_dash">
+    <div class="row">
+      <h4>BONJOUR A TOUS</h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="../js/materialize.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.dropdown-trigger').dropdown();
+    });
+  </script>
+</body>
+
+</html>
