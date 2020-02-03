@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="photoboothproject_2020Model.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="compte">
+    <Key>
+      <PropertyRef Name="idCompte" />
+    </Key>
+    <Property Name="idCompte" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Prenom" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="MotDePasse" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="compte_has_photo">
+    <Key>
+      <PropertyRef Name="Compte_idCompte" />
+      <PropertyRef Name="Photo_idPhoto" />
+      <PropertyRef Name="Photo_Evenements_idEvenements" />
+      <PropertyRef Name="Photo_Evenements_Compte_idCompte" />
+    </Key>
+    <Property Name="Compte_idCompte" Type="int" Nullable="false" />
+    <Property Name="Photo_idPhoto" Type="int" Nullable="false" />
+    <Property Name="Photo_Evenements_idEvenements" Type="int" Nullable="false" />
+    <Property Name="Photo_Evenements_Compte_idCompte" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="evenements">
+    <Key>
+      <PropertyRef Name="idEvenements" />
+      <PropertyRef Name="Compte_idCompte" />
+    </Key>
+    <Property Name="idEvenements" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="DateDebut" Type="date" Nullable="false" />
+    <Property Name="DateDeFin" Type="date" Nullable="false" />
+    <Property Name="Compte_idCompte" Type="int" Nullable="false" />
+    <Property Name="MotDePasseEvent" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="evenements_attente">
+    <Key>
+      <PropertyRef Name="idEvenements_Attente" />
+    </Key>
+    <Property Name="idEvenements_Attente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="DateDebut" Type="date" Nullable="false" />
+    <Property Name="DateDeFin" Type="date" Nullable="false" />
+    <Property Name="MotDePasseEvent" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="IdCompte" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="photo">
+    <Key>
+      <PropertyRef Name="idPhoto" />
+      <PropertyRef Name="Evenements_idEvenements" />
+      <PropertyRef Name="Evenements_Compte_idCompte" />
+    </Key>
+    <Property Name="idPhoto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CheminDacces" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="RawBytesQR" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Evenements_idEvenements" Type="int" Nullable="false" />
+    <Property Name="Evenements_Compte_idCompte" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="fk_Compte_has_Photo_Compte1">
+    <End Role="compte" Type="Self.compte" Multiplicity="1" />
+    <End Role="compte_has_photo" Type="Self.compte_has_photo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="compte">
+        <PropertyRef Name="idCompte" />
+      </Principal>
+      <Dependent Role="compte_has_photo">
+        <PropertyRef Name="Compte_idCompte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Compte_has_Photo_Photo1">
+    <End Role="photo" Type="Self.photo" Multiplicity="1" />
+    <End Role="compte_has_photo" Type="Self.compte_has_photo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="photo">
+        <PropertyRef Name="idPhoto" />
+        <PropertyRef Name="Evenements_idEvenements" />
+        <PropertyRef Name="Evenements_Compte_idCompte" />
+      </Principal>
+      <Dependent Role="compte_has_photo">
+        <PropertyRef Name="Photo_idPhoto" />
+        <PropertyRef Name="Photo_Evenements_idEvenements" />
+        <PropertyRef Name="Photo_Evenements_Compte_idCompte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Evenements_Compte1">
+    <End Role="compte" Type="Self.compte" Multiplicity="1" />
+    <End Role="evenements" Type="Self.evenements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="compte">
+        <PropertyRef Name="idCompte" />
+      </Principal>
+      <Dependent Role="evenements">
+        <PropertyRef Name="Compte_idCompte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Photo_Evenements1">
+    <End Role="evenements" Type="Self.evenements" Multiplicity="1" />
+    <End Role="photo" Type="Self.photo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="evenements">
+        <PropertyRef Name="idEvenements" />
+        <PropertyRef Name="Compte_idCompte" />
+      </Principal>
+      <Dependent Role="photo">
+        <PropertyRef Name="Evenements_idEvenements" />
+        <PropertyRef Name="Evenements_Compte_idCompte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="photoboothproject_2020ModelStoreContainer">
+    <EntitySet Name="compte" EntityType="Self.compte" Schema="photoboothproject_2020" store:Type="Tables" />
+    <EntitySet Name="compte_has_photo" EntityType="Self.compte_has_photo" Schema="photoboothproject_2020" store:Type="Tables" />
+    <EntitySet Name="evenements" EntityType="Self.evenements" Schema="photoboothproject_2020" store:Type="Tables" />
+    <EntitySet Name="evenements_attente" EntityType="Self.evenements_attente" Schema="photoboothproject_2020" store:Type="Tables" />
+    <EntitySet Name="photo" EntityType="Self.photo" Schema="photoboothproject_2020" store:Type="Tables" />
+    <AssociationSet Name="fk_Compte_has_Photo_Compte1" Association="Self.fk_Compte_has_Photo_Compte1">
+      <End Role="compte" EntitySet="compte" />
+      <End Role="compte_has_photo" EntitySet="compte_has_photo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Compte_has_Photo_Photo1" Association="Self.fk_Compte_has_Photo_Photo1">
+      <End Role="photo" EntitySet="photo" />
+      <End Role="compte_has_photo" EntitySet="compte_has_photo" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Evenements_Compte1" Association="Self.fk_Evenements_Compte1">
+      <End Role="compte" EntitySet="compte" />
+      <End Role="evenements" EntitySet="evenements" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Photo_Evenements1" Association="Self.fk_Photo_Evenements1">
+      <End Role="evenements" EntitySet="evenements" />
+      <End Role="photo" EntitySet="photo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
