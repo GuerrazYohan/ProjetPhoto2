@@ -72,6 +72,9 @@ if(isset($_POST['forminscription']))
     <div class="col s12 l5 offset-14">
       <div class="card">
         <div class="card-action purple white-text center">
+          <div>
+            <h3>BONJOUR</h3>
+          </div>
           <h3>S'inscrire</h3>
         </div>
         <div class="card-content">
