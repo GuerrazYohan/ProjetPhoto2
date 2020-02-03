@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\AwesomeApp\\AwesomeApp.UWP\\AwesomeApp.UWP.csproj": {}
+    "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp.UWP\\AwesomeApp.UWP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\AwesomeApp\\AwesomeApp.UWP\\AwesomeApp.UWP.csproj": {
+    "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp.UWP\\AwesomeApp.UWP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\AwesomeApp\\AwesomeApp.UWP\\AwesomeApp.UWP.csproj",
+        "projectUniqueName": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp.UWP\\AwesomeApp.UWP.csproj",
         "projectName": "AwesomeApp.UWP",
-        "projectPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\AwesomeApp\\AwesomeApp.UWP\\AwesomeApp.UWP.csproj",
+        "projectPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp.UWP\\AwesomeApp.UWP.csproj",
         "packagesPath": "C:\\Users\\Guerraz Yohan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\AwesomeApp\\AwesomeApp.UWP\\obj\\",
+        "outputPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp.UWP\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -33,8 +33,8 @@
         "frameworks": {
           "uap10.0.16299": {
             "projectReferences": {
-              "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\AwesomeApp\\AwesomeApp\\AwesomeApp.csproj": {
-                "projectPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\AwesomeApp\\AwesomeApp\\AwesomeApp.csproj"
+              "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp\\AwesomeApp.csproj": {
+                "projectPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp\\AwesomeApp.csproj"
               }
             }
           }
@@ -45,7 +45,7 @@
           "dependencies": {
             "Microsoft.NETCore.UniversalWindowsPlatform": {
               "target": "Package",
-              "version": "[6.1.5, )"
+              "version": "[6.2.9, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -91,14 +91,14 @@
         }
       }
     },
-    "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\AwesomeApp\\AwesomeApp\\AwesomeApp.csproj": {
+    "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp\\AwesomeApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\AwesomeApp\\AwesomeApp\\AwesomeApp.csproj",
+        "projectUniqueName": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp\\AwesomeApp.csproj",
         "projectName": "AwesomeApp",
-        "projectPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\AwesomeApp\\AwesomeApp\\AwesomeApp.csproj",
+        "projectPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp\\AwesomeApp.csproj",
         "packagesPath": "C:\\Users\\Guerraz Yohan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\AwesomeApp\\AwesomeApp\\obj\\",
+        "outputPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -130,6 +130,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.NETCore.UniversalWindowsPlatform": {
+              "target": "Package",
+              "version": "[6.2.9, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

@@ -8,9 +8,6 @@
 
 
     
-
-    
-
     <ContentPage.Content>
         <ScrollView>
             <Grid Margin="16">

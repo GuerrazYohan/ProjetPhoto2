@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "AwesomeApp/1.0.0": {
         "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.9",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "12.0.3",
           "Rg.Plugins.Popup": "1.2.0.223",
@@ -19,6 +20,7 @@
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.UniversalWindowsPlatform/6.2.9": {},
       "NETStandard.Library/2.0.3": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -73,6 +75,13 @@
       "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.UniversalWindowsPlatform/6.2.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QcNHcEvhO0bMhF1LW7Ebn1f6wrzvbkloRsZSrAZsGbAAqdhmfuZcD3VVeVCL8VWsBXRlhdb3+0Y7HLxvnMTpZA==",
+      "path": "microsoft.netcore.universalwindowsplatform/6.2.9",
+      "hashPath": "microsoft.netcore.universalwindowsplatform.6.2.9.nupkg.sha512"
     },
     "NETStandard.Library/2.0.3": {
       "type": "package",
