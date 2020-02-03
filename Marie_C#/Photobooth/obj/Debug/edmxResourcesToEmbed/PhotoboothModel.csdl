@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="photoboothproject_2020Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="compte">
+    <Key>
+      <PropertyRef Name="idCompte" />
+    </Key>
+    <Property Name="idCompte" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Prenom" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MotDePasse" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="evenements" Relationship="Self.fk_Evenements_Compte1" FromRole="compte" ToRole="evenements" />
+    <NavigationProperty Name="photo" Relationship="Self.compte_has_photo" FromRole="compte" ToRole="photo" />
+  </EntityType>
+  <EntityType Name="evenements">
+    <Key>
+      <PropertyRef Name="idEvenements" />
+      <PropertyRef Name="Compte_idCompte" />
+    </Key>
+    <Property Name="idEvenements" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateDebut" Type="DateTime" Nullable="false" />
+    <Property Name="DateDeFin" Type="DateTime" Nullable="false" />
+    <Property Name="Compte_idCompte" Type="Int32" Nullable="false" />
+    <Property Name="MotDePasseEvent" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="compte" Relationship="Self.fk_Evenements_Compte1" FromRole="evenements" ToRole="compte" />
+    <NavigationProperty Name="photo" Relationship="Self.fk_Photo_Evenements1" FromRole="evenements" ToRole="photo" />
+  </EntityType>
+  <EntityType Name="evenements_attente">
+    <Key>
+      <PropertyRef Name="idEvenements_Attente" />
+    </Key>
+    <Property Name="idEvenements_Attente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nom" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateDebut" Type="DateTime" Nullable="false" />
+    <Property Name="DateDeFin" Type="DateTime" Nullable="false" />
+    <Property Name="MotDePasseEvent" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IdCompte" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="photo">
+    <Key>
+      <PropertyRef Name="idPhoto" />
+      <PropertyRef Name="Evenements_idEvenements" />
+      <PropertyRef Name="Evenements_Compte_idCompte" />
+    </Key>
+    <Property Name="idPhoto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CheminDacces" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RawBytesQR" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Evenements_idEvenements" Type="Int32" Nullable="false" />
+    <Property Name="Evenements_Compte_idCompte" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="evenements" Relationship="Self.fk_Photo_Evenements1" FromRole="photo" ToRole="evenements" />
+    <NavigationProperty Name="compte" Relationship="Self.compte_has_photo" FromRole="photo" ToRole="compte" />
+  </EntityType>
+  <Association Name="fk_Evenements_Compte1">
+    <End Role="compte" Type="Self.compte" Multiplicity="1" />
+    <End Role="evenements" Type="Self.evenements" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="compte">
+        <PropertyRef Name="idCompte" />
+      </Principal>
+      <Dependent Role="evenements">
+        <PropertyRef Name="Compte_idCompte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_Photo_Evenements1">
+    <End Role="evenements" Type="Self.evenements" Multiplicity="1" />
+    <End Role="photo" Type="Self.photo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="evenements">
+        <PropertyRef Name="idEvenements" />
+        <PropertyRef Name="Compte_idCompte" />
+      </Principal>
+      <Dependent Role="photo">
+        <PropertyRef Name="Evenements_idEvenements" />
+        <PropertyRef Name="Evenements_Compte_idCompte" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="compte_has_photo">
+    <End Role="compte" Type="Self.compte" Multiplicity="*" />
+    <End Role="photo" Type="Self.photo" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="photoboothproject_2020Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="compte" EntityType="Self.compte" />
+    <EntitySet Name="evenements" EntityType="Self.evenements" />
+    <EntitySet Name="evenements_attente" EntityType="Self.evenements_attente" />
+    <EntitySet Name="photo" EntityType="Self.photo" />
+    <AssociationSet Name="fk_Evenements_Compte1" Association="Self.fk_Evenements_Compte1">
+      <End Role="compte" EntitySet="compte" />
+      <End Role="evenements" EntitySet="evenements" />
+    </AssociationSet>
+    <AssociationSet Name="fk_Photo_Evenements1" Association="Self.fk_Photo_Evenements1">
+      <End Role="evenements" EntitySet="evenements" />
+      <End Role="photo" EntitySet="photo" />
+    </AssociationSet>
+    <AssociationSet Name="compte_has_photo" Association="Self.compte_has_photo">
+      <End Role="compte" EntitySet="compte" />
+      <End Role="photo" EntitySet="photo" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
