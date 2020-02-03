@@ -1,0 +1,15 @@
+api_platform:
+    mapping:
+        paths: ['%kernel.project_dir%/src/Entity']
+    formats:
+        json:
+            mime_types: ['application/json']
+        html:
+            mime_types: ['text/html']
+    # The title of the API.
+    title: 'API PhotoBooth Project'
+    # The description of the API.
+    description: "Service web pour gérer les informations de ESG "
+    # The version of the API.
+    version: '1.0.0'
+
