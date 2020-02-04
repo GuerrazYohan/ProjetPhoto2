@@ -1,0 +1,2163 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "",
+        "version": "0.0.0"
+    },
+    "paths": {
+        "\/PhotoBoothProject\/compte_has_photos": {
+            "get": {
+                "tags": [
+                    "CompteHasPhoto"
+                ],
+                "operationId": "getCompteHasPhotoCollection",
+                "summary": "Retrieves the collection of CompteHasPhoto resources.",
+                "responses": {
+                    "200": {
+                        "description": "CompteHasPhoto collection response",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "hydra:member": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/CompteHasPhoto:jsonld"
+                                            }
+                                        },
+                                        "hydra:totalItems": {
+                                            "type": "integer",
+                                            "minimum": 0
+                                        },
+                                        "hydra:view": {
+                                            "type": "object",
+                                            "properties": {
+                                                "@id": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "@type": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:first": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "hydra:last": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "hydra:next": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                }
+                                            }
+                                        },
+                                        "hydra:search": {
+                                            "type": "object",
+                                            "properties": {
+                                                "@type": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:template": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:variableRepresentation": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:mapping": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "@type": {
+                                                                "type": "string"
+                                                            },
+                                                            "variable": {
+                                                                "type": "string"
+                                                            },
+                                                            "property": {
+                                                                "type": "string"
+                                                            },
+                                                            "required": {
+                                                                "type": "boolean"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "hydra:member"
+                                    ]
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                                    }
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "CompteHasPhoto"
+                ],
+                "operationId": "postCompteHasPhotoCollection",
+                "summary": "Creates a CompteHasPhoto resource.",
+                "responses": {
+                    "201": {
+                        "description": "CompteHasPhoto resource created",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/CompteHasPhoto:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                                }
+                            }
+                        },
+                        "links": {
+                            "GetCompteHasPhotoItem": {
+                                "parameters": {
+                                    "compteIdcompte": "$response.body#\/compteIdcompte",
+                                    "photoIdphoto": "$response.body#\/photoIdphoto"
+                                },
+                                "operationId": "getCompteHasPhotoItem",
+                                "description": "The values returned in the response can be used in `GET \/PhotoBoothProject\/compte_has_photos\/{id}`."
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/ld+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/CompteHasPhoto:jsonld"
+                            }
+                        },
+                        "application\/json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                            }
+                        },
+                        "text\/html": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                            }
+                        }
+                    },
+                    "description": "The new CompteHasPhoto resource"
+                }
+            }
+        },
+        "\/PhotoBoothProject\/compte_has_photos\/{id}": {
+            "get": {
+                "tags": [
+                    "CompteHasPhoto"
+                ],
+                "operationId": "getCompteHasPhotoItem",
+                "summary": "Retrieves a CompteHasPhoto resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "CompteHasPhoto resource response",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/CompteHasPhoto:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "CompteHasPhoto"
+                ],
+                "operationId": "deleteCompteHasPhotoItem",
+                "summary": "Removes the CompteHasPhoto resource.",
+                "responses": {
+                    "204": {
+                        "description": "CompteHasPhoto resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "CompteHasPhoto"
+                ],
+                "operationId": "putCompteHasPhotoItem",
+                "summary": "Replaces the CompteHasPhoto resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "CompteHasPhoto resource updated",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/CompteHasPhoto:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/ld+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/CompteHasPhoto:jsonld"
+                            }
+                        },
+                        "application\/json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                            }
+                        },
+                        "text\/html": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                            }
+                        }
+                    },
+                    "description": "The updated CompteHasPhoto resource"
+                }
+            },
+            "patch": {
+                "tags": [
+                    "CompteHasPhoto"
+                ],
+                "operationId": "patchCompteHasPhotoItem",
+                "summary": "Updates the CompteHasPhoto resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "CompteHasPhoto resource updated",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/CompteHasPhoto:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/merge-patch+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/CompteHasPhoto"
+                            }
+                        }
+                    },
+                    "description": "The updated CompteHasPhoto resource"
+                }
+            }
+        },
+        "\/PhotoBoothProject\/comptes": {
+            "get": {
+                "tags": [
+                    "Compte"
+                ],
+                "operationId": "getCompteCollection",
+                "summary": "Retrieves the collection of Compte resources.",
+                "responses": {
+                    "200": {
+                        "description": "Compte collection response",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "hydra:member": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Compte:jsonld"
+                                            }
+                                        },
+                                        "hydra:totalItems": {
+                                            "type": "integer",
+                                            "minimum": 0
+                                        },
+                                        "hydra:view": {
+                                            "type": "object",
+                                            "properties": {
+                                                "@id": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "@type": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:first": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "hydra:last": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "hydra:next": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                }
+                                            }
+                                        },
+                                        "hydra:search": {
+                                            "type": "object",
+                                            "properties": {
+                                                "@type": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:template": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:variableRepresentation": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:mapping": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "@type": {
+                                                                "type": "string"
+                                                            },
+                                                            "variable": {
+                                                                "type": "string"
+                                                            },
+                                                            "property": {
+                                                                "type": "string"
+                                                            },
+                                                            "required": {
+                                                                "type": "boolean"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "hydra:member"
+                                    ]
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#\/components\/schemas\/Compte"
+                                    }
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#\/components\/schemas\/Compte"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Compte"
+                ],
+                "operationId": "postCompteCollection",
+                "summary": "Creates a Compte resource.",
+                "responses": {
+                    "201": {
+                        "description": "Compte resource created",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Compte:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Compte"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Compte"
+                                }
+                            }
+                        },
+                        "links": {
+                            "GetCompteItem": {
+                                "parameters": {
+                                    "idcompte": "$response.body#\/idcompte"
+                                },
+                                "operationId": "getCompteItem",
+                                "description": "The `idcompte` value returned in the response can be used as the `idcompte` parameter in `GET \/PhotoBoothProject\/comptes\/{id}`."
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/ld+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Compte:jsonld"
+                            }
+                        },
+                        "application\/json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Compte"
+                            }
+                        },
+                        "text\/html": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Compte"
+                            }
+                        }
+                    },
+                    "description": "The new Compte resource"
+                }
+            }
+        },
+        "\/PhotoBoothProject\/comptes\/{id}": {
+            "get": {
+                "tags": [
+                    "Compte"
+                ],
+                "operationId": "getCompteItem",
+                "summary": "Retrieves a Compte resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Compte resource response",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Compte:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Compte"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Compte"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Compte"
+                ],
+                "operationId": "deleteCompteItem",
+                "summary": "Removes the Compte resource.",
+                "responses": {
+                    "204": {
+                        "description": "Compte resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Compte"
+                ],
+                "operationId": "putCompteItem",
+                "summary": "Replaces the Compte resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Compte resource updated",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Compte:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Compte"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Compte"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/ld+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Compte:jsonld"
+                            }
+                        },
+                        "application\/json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Compte"
+                            }
+                        },
+                        "text\/html": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Compte"
+                            }
+                        }
+                    },
+                    "description": "The updated Compte resource"
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Compte"
+                ],
+                "operationId": "patchCompteItem",
+                "summary": "Updates the Compte resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Compte resource updated",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Compte:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Compte"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Compte"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/merge-patch+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Compte"
+                            }
+                        }
+                    },
+                    "description": "The updated Compte resource"
+                }
+            }
+        },
+        "\/PhotoBoothProject\/evenements": {
+            "get": {
+                "tags": [
+                    "Evenements"
+                ],
+                "operationId": "getEvenementsCollection",
+                "summary": "Retrieves the collection of Evenements resources.",
+                "responses": {
+                    "200": {
+                        "description": "Evenements collection response",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "hydra:member": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Evenements:jsonld"
+                                            }
+                                        },
+                                        "hydra:totalItems": {
+                                            "type": "integer",
+                                            "minimum": 0
+                                        },
+                                        "hydra:view": {
+                                            "type": "object",
+                                            "properties": {
+                                                "@id": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "@type": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:first": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "hydra:last": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "hydra:next": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                }
+                                            }
+                                        },
+                                        "hydra:search": {
+                                            "type": "object",
+                                            "properties": {
+                                                "@type": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:template": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:variableRepresentation": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:mapping": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "@type": {
+                                                                "type": "string"
+                                                            },
+                                                            "variable": {
+                                                                "type": "string"
+                                                            },
+                                                            "property": {
+                                                                "type": "string"
+                                                            },
+                                                            "required": {
+                                                                "type": "boolean"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "hydra:member"
+                                    ]
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#\/components\/schemas\/Evenements"
+                                    }
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#\/components\/schemas\/Evenements"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Evenements"
+                ],
+                "operationId": "postEvenementsCollection",
+                "summary": "Creates a Evenements resource.",
+                "responses": {
+                    "201": {
+                        "description": "Evenements resource created",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Evenements:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Evenements"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Evenements"
+                                }
+                            }
+                        },
+                        "links": {
+                            "GetEvenementsItem": {
+                                "parameters": {
+                                    "idevenements": "$response.body#\/idevenements"
+                                },
+                                "operationId": "getEvenementsItem",
+                                "description": "The `idevenements` value returned in the response can be used as the `idevenements` parameter in `GET \/PhotoBoothProject\/evenements\/{id}`."
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/ld+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Evenements:jsonld"
+                            }
+                        },
+                        "application\/json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Evenements"
+                            }
+                        },
+                        "text\/html": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Evenements"
+                            }
+                        }
+                    },
+                    "description": "The new Evenements resource"
+                }
+            }
+        },
+        "\/PhotoBoothProject\/evenements\/{id}": {
+            "get": {
+                "tags": [
+                    "Evenements"
+                ],
+                "operationId": "getEvenementsItem",
+                "summary": "Retrieves a Evenements resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Evenements resource response",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Evenements:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Evenements"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Evenements"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Evenements"
+                ],
+                "operationId": "deleteEvenementsItem",
+                "summary": "Removes the Evenements resource.",
+                "responses": {
+                    "204": {
+                        "description": "Evenements resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Evenements"
+                ],
+                "operationId": "putEvenementsItem",
+                "summary": "Replaces the Evenements resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Evenements resource updated",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Evenements:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Evenements"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Evenements"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/ld+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Evenements:jsonld"
+                            }
+                        },
+                        "application\/json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Evenements"
+                            }
+                        },
+                        "text\/html": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Evenements"
+                            }
+                        }
+                    },
+                    "description": "The updated Evenements resource"
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Evenements"
+                ],
+                "operationId": "patchEvenementsItem",
+                "summary": "Updates the Evenements resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Evenements resource updated",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Evenements:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Evenements"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Evenements"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/merge-patch+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Evenements"
+                            }
+                        }
+                    },
+                    "description": "The updated Evenements resource"
+                }
+            }
+        },
+        "\/PhotoBoothProject\/evenements_attentes": {
+            "get": {
+                "tags": [
+                    "EvenementsAttente"
+                ],
+                "operationId": "getEvenementsAttenteCollection",
+                "summary": "Retrieves the collection of EvenementsAttente resources.",
+                "responses": {
+                    "200": {
+                        "description": "EvenementsAttente collection response",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "hydra:member": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/EvenementsAttente:jsonld"
+                                            }
+                                        },
+                                        "hydra:totalItems": {
+                                            "type": "integer",
+                                            "minimum": 0
+                                        },
+                                        "hydra:view": {
+                                            "type": "object",
+                                            "properties": {
+                                                "@id": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "@type": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:first": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "hydra:last": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "hydra:next": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                }
+                                            }
+                                        },
+                                        "hydra:search": {
+                                            "type": "object",
+                                            "properties": {
+                                                "@type": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:template": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:variableRepresentation": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:mapping": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "@type": {
+                                                                "type": "string"
+                                                            },
+                                                            "variable": {
+                                                                "type": "string"
+                                                            },
+                                                            "property": {
+                                                                "type": "string"
+                                                            },
+                                                            "required": {
+                                                                "type": "boolean"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "hydra:member"
+                                    ]
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#\/components\/schemas\/EvenementsAttente"
+                                    }
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#\/components\/schemas\/EvenementsAttente"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "EvenementsAttente"
+                ],
+                "operationId": "postEvenementsAttenteCollection",
+                "summary": "Creates a EvenementsAttente resource.",
+                "responses": {
+                    "201": {
+                        "description": "EvenementsAttente resource created",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/EvenementsAttente:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/EvenementsAttente"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/EvenementsAttente"
+                                }
+                            }
+                        },
+                        "links": {
+                            "GetEvenementsAttenteItem": {
+                                "parameters": {
+                                    "idevenementsAttente": "$response.body#\/idevenementsAttente"
+                                },
+                                "operationId": "getEvenementsAttenteItem",
+                                "description": "The `idevenementsAttente` value returned in the response can be used as the `idevenementsAttente` parameter in `GET \/PhotoBoothProject\/evenements_attentes\/{id}`."
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/ld+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/EvenementsAttente:jsonld"
+                            }
+                        },
+                        "application\/json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/EvenementsAttente"
+                            }
+                        },
+                        "text\/html": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/EvenementsAttente"
+                            }
+                        }
+                    },
+                    "description": "The new EvenementsAttente resource"
+                }
+            }
+        },
+        "\/PhotoBoothProject\/evenements_attentes\/{id}": {
+            "get": {
+                "tags": [
+                    "EvenementsAttente"
+                ],
+                "operationId": "getEvenementsAttenteItem",
+                "summary": "Retrieves a EvenementsAttente resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "EvenementsAttente resource response",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/EvenementsAttente:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/EvenementsAttente"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/EvenementsAttente"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "EvenementsAttente"
+                ],
+                "operationId": "deleteEvenementsAttenteItem",
+                "summary": "Removes the EvenementsAttente resource.",
+                "responses": {
+                    "204": {
+                        "description": "EvenementsAttente resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "EvenementsAttente"
+                ],
+                "operationId": "putEvenementsAttenteItem",
+                "summary": "Replaces the EvenementsAttente resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "EvenementsAttente resource updated",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/EvenementsAttente:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/EvenementsAttente"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/EvenementsAttente"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/ld+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/EvenementsAttente:jsonld"
+                            }
+                        },
+                        "application\/json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/EvenementsAttente"
+                            }
+                        },
+                        "text\/html": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/EvenementsAttente"
+                            }
+                        }
+                    },
+                    "description": "The updated EvenementsAttente resource"
+                }
+            },
+            "patch": {
+                "tags": [
+                    "EvenementsAttente"
+                ],
+                "operationId": "patchEvenementsAttenteItem",
+                "summary": "Updates the EvenementsAttente resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "EvenementsAttente resource updated",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/EvenementsAttente:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/EvenementsAttente"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/EvenementsAttente"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/merge-patch+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/EvenementsAttente"
+                            }
+                        }
+                    },
+                    "description": "The updated EvenementsAttente resource"
+                }
+            }
+        },
+        "\/PhotoBoothProject\/photos": {
+            "get": {
+                "tags": [
+                    "Photo"
+                ],
+                "operationId": "getPhotoCollection",
+                "summary": "Retrieves the collection of Photo resources.",
+                "responses": {
+                    "200": {
+                        "description": "Photo collection response",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "hydra:member": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#\/components\/schemas\/Photo:jsonld"
+                                            }
+                                        },
+                                        "hydra:totalItems": {
+                                            "type": "integer",
+                                            "minimum": 0
+                                        },
+                                        "hydra:view": {
+                                            "type": "object",
+                                            "properties": {
+                                                "@id": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "@type": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:first": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "hydra:last": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                },
+                                                "hydra:next": {
+                                                    "type": "string",
+                                                    "format": "iri-reference"
+                                                }
+                                            }
+                                        },
+                                        "hydra:search": {
+                                            "type": "object",
+                                            "properties": {
+                                                "@type": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:template": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:variableRepresentation": {
+                                                    "type": "string"
+                                                },
+                                                "hydra:mapping": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "@type": {
+                                                                "type": "string"
+                                                            },
+                                                            "variable": {
+                                                                "type": "string"
+                                                            },
+                                                            "property": {
+                                                                "type": "string"
+                                                            },
+                                                            "required": {
+                                                                "type": "boolean"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "hydra:member"
+                                    ]
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#\/components\/schemas\/Photo"
+                                    }
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#\/components\/schemas\/Photo"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "description": "The collection page number",
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Photo"
+                ],
+                "operationId": "postPhotoCollection",
+                "summary": "Creates a Photo resource.",
+                "responses": {
+                    "201": {
+                        "description": "Photo resource created",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Photo:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Photo"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Photo"
+                                }
+                            }
+                        },
+                        "links": {
+                            "GetPhotoItem": {
+                                "parameters": {
+                                    "idphoto": "$response.body#\/idphoto"
+                                },
+                                "operationId": "getPhotoItem",
+                                "description": "The `idphoto` value returned in the response can be used as the `idphoto` parameter in `GET \/PhotoBoothProject\/photos\/{id}`."
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/ld+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Photo:jsonld"
+                            }
+                        },
+                        "application\/json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Photo"
+                            }
+                        },
+                        "text\/html": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Photo"
+                            }
+                        }
+                    },
+                    "description": "The new Photo resource"
+                }
+            }
+        },
+        "\/PhotoBoothProject\/photos\/{id}": {
+            "get": {
+                "tags": [
+                    "Photo"
+                ],
+                "operationId": "getPhotoItem",
+                "summary": "Retrieves a Photo resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Photo resource response",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Photo:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Photo"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Photo"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Photo"
+                ],
+                "operationId": "deletePhotoItem",
+                "summary": "Removes the Photo resource.",
+                "responses": {
+                    "204": {
+                        "description": "Photo resource deleted"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "Photo"
+                ],
+                "operationId": "putPhotoItem",
+                "summary": "Replaces the Photo resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Photo resource updated",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Photo:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Photo"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Photo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/ld+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Photo:jsonld"
+                            }
+                        },
+                        "application\/json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Photo"
+                            }
+                        },
+                        "text\/html": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Photo"
+                            }
+                        }
+                    },
+                    "description": "The updated Photo resource"
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Photo"
+                ],
+                "operationId": "patchPhotoItem",
+                "summary": "Updates the Photo resource.",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Photo resource updated",
+                        "content": {
+                            "application\/ld+json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Photo:jsonld"
+                                }
+                            },
+                            "application\/json": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Photo"
+                                }
+                            },
+                            "text\/html": {
+                                "schema": {
+                                    "$ref": "#\/components\/schemas\/Photo"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "404": {
+                        "description": "Resource not found"
+                    }
+                },
+                "requestBody": {
+                    "content": {
+                        "application\/merge-patch+json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Photo"
+                            }
+                        }
+                    },
+                    "description": "The updated Photo resource"
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Compte": {
+                "type": "object",
+                "description": "Compte",
+                "properties": {
+                    "idcompte": {
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "nom": {
+                        "type": "string"
+                    },
+                    "prenom": {
+                        "type": "string"
+                    },
+                    "motdepasse": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Compte:jsonld": {
+                "type": "object",
+                "description": "Compte",
+                "properties": {
+                    "@context": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "@id": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "@type": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "idcompte": {
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "nom": {
+                        "type": "string"
+                    },
+                    "prenom": {
+                        "type": "string"
+                    },
+                    "motdepasse": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    }
+                }
+            },
+            "CompteHasPhoto": {
+                "type": "object",
+                "description": "CompteHasPhoto",
+                "properties": {
+                    "compteIdcompte": {
+                        "type": "string",
+                        "format": "iri-reference"
+                    },
+                    "evenementsIdevenements": {
+                        "type": "string",
+                        "format": "iri-reference"
+                    },
+                    "photoIdphoto": {
+                        "type": "string",
+                        "format": "iri-reference"
+                    }
+                }
+            },
+            "CompteHasPhoto:jsonld": {
+                "type": "object",
+                "description": "CompteHasPhoto",
+                "properties": {
+                    "@context": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "@id": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "@type": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "compteIdcompte": {
+                        "type": "string",
+                        "format": "iri-reference"
+                    },
+                    "evenementsIdevenements": {
+                        "type": "string",
+                        "format": "iri-reference"
+                    },
+                    "photoIdphoto": {
+                        "type": "string",
+                        "format": "iri-reference"
+                    }
+                }
+            },
+            "Evenements": {
+                "type": "object",
+                "description": "Evenements",
+                "properties": {
+                    "idevenements": {
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "nom": {
+                        "type": "string"
+                    },
+                    "datedebut": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "datedefin": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "motdepasseevent": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Evenements:jsonld": {
+                "type": "object",
+                "description": "Evenements",
+                "properties": {
+                    "@context": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "@id": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "@type": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "idevenements": {
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "nom": {
+                        "type": "string"
+                    },
+                    "datedebut": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "datedefin": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "motdepasseevent": {
+                        "type": "string"
+                    }
+                }
+            },
+            "EvenementsAttente": {
+                "type": "object",
+                "description": "EvenementsAttente",
+                "properties": {
+                    "idevenementsAttente": {
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "nom": {
+                        "type": "string"
+                    },
+                    "datedebut": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "datedefin": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "motdepasseevent": {
+                        "type": "string"
+                    },
+                    "idcompte": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "EvenementsAttente:jsonld": {
+                "type": "object",
+                "description": "EvenementsAttente",
+                "properties": {
+                    "@context": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "@id": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "@type": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "idevenementsAttente": {
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "nom": {
+                        "type": "string"
+                    },
+                    "datedebut": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "datedefin": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "motdepasseevent": {
+                        "type": "string"
+                    },
+                    "idcompte": {
+                        "type": "integer"
+                    }
+                }
+            },
+            "Photo": {
+                "type": "object",
+                "description": "Photo",
+                "properties": {
+                    "idphoto": {
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "chemindacces": {
+                        "type": "string"
+                    },
+                    "rawbytesqr": {
+                        "type": "string"
+                    }
+                }
+            },
+            "Photo:jsonld": {
+                "type": "object",
+                "description": "Photo",
+                "properties": {
+                    "@context": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "@id": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "@type": {
+                        "readOnly": true,
+                        "type": "string"
+                    },
+                    "idphoto": {
+                        "readOnly": true,
+                        "type": "integer"
+                    },
+                    "chemindacces": {
+                        "type": "string"
+                    },
+                    "rawbytesqr": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
