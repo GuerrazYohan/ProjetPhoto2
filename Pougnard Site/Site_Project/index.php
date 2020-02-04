@@ -106,7 +106,7 @@
     });
       setInterval(function(){
         $('.carousel').carousel('next');
-      },8000);
+      },6000);
     $('.parallax').parallax();
   });
   </script>

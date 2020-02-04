@@ -66,15 +66,12 @@ if(isset($_POST['forminscription']))
   <title>S'inscrire</title>
 </head>
 
-<body id="body2">
+<body id="Body2">
   <a class="btn-floating btn-large waves-effect waves-light purple btn_home" href="../../index.php"><i class="fas fa-home"></i></a>
   <div class="row Signin">
     <div class="col s12 l5 offset-14">
       <div class="card">
         <div class="card-action purple white-text center">
-          <div>
-            <h3>BONJOUR</h3>
-          </div>
           <h3>S'inscrire</h3>
         </div>
         <div class="card-content">
