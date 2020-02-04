@@ -1,2 +1,2 @@
 # ProjetPhoto2
-application mobile pour photobooth
+Projet de Photo maton avec interface, site web, application mobile et bdd
