@@ -39,14 +39,18 @@
 .login input {
   color: white;
 }
-#Body1
+#body1
 {
     background-image: url(../img/bg_2.jpg);
 }
 
-#Body2
+#body2
 {
   background-image: url(../img/bg_3.jpg);
+}
+#body3
+{
+  background-image: url(../img/bg_4.jpg);
 }
 .checkbox_remember[type="checkbox"]:checked + span:not(.lever):before{
   border-bottom: 2px solid #8e24aa;
