@@ -23,34 +23,13 @@ namespace Photobooth.View
     /// </summary>
     public partial class UC_Login : UserControl
     {
-        DaoCompte DaoLogin = new DaoCompte();
-        compte MonCompte = new compte();
-        evenements MesEvenements = new evenements();
+        
         public UC_Login()
         {
             InitializeComponent();
         }
 
-        private void Btn_Login_Click(object sender, RoutedEventArgs e)
-        {  
-            if(MonCompte != null && MesEvenements != null)
-            {
-                //if(tb_Username.Text = MonCompte.Email && tb_Mdp.Password = MesEvenements.MotDePasseEvent)
-                //{
-
-                //}
-                DaoLogin.GetCompte();
-                string Username = MonCompte.Email;
-                string Password = MesEvenements.MotDePasseEvent;
-                Convert.ToInt32(Username);
-                Convert.ToInt32(Password);
-
-                if(tb_Username.Text == Username && tb_Mdp.Text == Password)
-                {
-                    Login_Grid.Visibility = Visibility.Hidden;
-                }
-            }
-        }
+        
 
        
     }
