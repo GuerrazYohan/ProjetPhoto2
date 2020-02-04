@@ -71,6 +71,7 @@
       <DependentUpon>PhotoboothModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controleur\DaoCompte.cs" />
+    <Compile Include="Controleur\DaoConnection.cs" />
     <Compile Include="Controleur\DaoEvenements.cs" />
     <Compile Include="evenements.cs">
       <DependentUpon>PhotoboothModel.tt</DependentUpon>
@@ -178,6 +179,8 @@
       <DependentUpon>PhotoboothModel.edmx</DependentUpon>
       <LastGenOutput>PhotoboothModel.cs</LastGenOutput>
     </Content>
+    <Resource Include="View\img\start.png" />
+    <Resource Include="View\img\config.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
