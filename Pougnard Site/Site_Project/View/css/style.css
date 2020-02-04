@@ -1,5 +1,6 @@
-
-
+.carousel{
+  height: 1000px;
+}
 .Signin {
   margin-top: 2%;
   margin-left: 20%;
@@ -48,6 +49,11 @@
 {
   background-image: url(../img/bg_3.jpg);
 }
+
+#Body3
+{
+  background-image: url(../img/bg_4.jpg);
+}
 .checkbox_remember[type="checkbox"]:checked + span:not(.lever):before{
   border-bottom: 2px solid #8e24aa;
   border-right: 2px solid #8e24aa;
@@ -57,5 +63,5 @@
   background-color: purple;
 }
 .dropdown-content li > a, .dropdown-content li > span {
-    color: #fb8c00 !important;
+    color: #7500fb !important;
 }

@@ -52,9 +52,9 @@ if(isset($_POST['forminscription']))
     $erreur = "Tous les champs doivent etre completer";
   }
 }
+?>
 
 
- ?>
 <html lang="en">
 
 <head>
@@ -72,9 +72,6 @@ if(isset($_POST['forminscription']))
     <div class="col s12 l5 offset-14">
       <div class="card">
         <div class="card-action purple white-text center">
-          <div>
-            <h3>BONJOUR</h3>
-          </div>
           <h3>S'inscrire</h3>
         </div>
         <div class="card-content">
@@ -131,7 +128,7 @@ if(isset($_POST['forminscription']))
   </div>
   <script src="https://kit.fontawesome.com/f97f9ece59.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-  <script src="../js/materialize.min.js"></script>
+  <script src="../../COntroler/js/materialize.min.js"></script>
 </body>
 
 </html>
