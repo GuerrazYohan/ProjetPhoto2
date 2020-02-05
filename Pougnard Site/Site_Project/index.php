@@ -38,12 +38,23 @@
  </div>
 
 
+
   <div class="carousel carousel-slider" data-indicators ="true">
-    <div class="carousel-item" href="#one!"><img src="View/img/img.jpg"></div>
-    <div class="carousel-item" href="#two!"><img src="View/img/img 2.jpg"></div>
-    <div class="carousel-item" href="#three!"><img src="View/img/img 3.jpg"></div>
-    <div class="carousel-item" href="#four!"><img src="View/img/img 4.jpg"></div>
-    <div class="carousel-item" href="#five!"><img src="View/img/img 5.jpg"></div>
+    <div class="carousel-item" href="#one!">
+      <img class="img_carousel" src="View/img/img.jpg">
+    </div>
+    <div class="carousel-item" href="#two!">
+      <img src="View/img/img2.jpg">
+    </div>
+    <div class="carousel-item" href="#three!">
+      <img src="View/img/img3.jpg">
+    </div>
+    <div class="carousel-item" href="#four!">
+      <img src="View/img/img4.jpg">
+    </div>
+    <div class="carousel-item" href="#five!">
+      <img src="View/img/img5.jpg">
+    </div>
   </div>
 
  <div class="parallax-container">
