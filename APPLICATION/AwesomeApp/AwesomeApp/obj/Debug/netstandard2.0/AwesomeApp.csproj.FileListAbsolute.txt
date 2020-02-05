@@ -37,5 +37,4 @@ C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\ob
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.AssemblyInfo.cs
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.dll
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.pdb
-C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.csprojAssemblyReference.cache
