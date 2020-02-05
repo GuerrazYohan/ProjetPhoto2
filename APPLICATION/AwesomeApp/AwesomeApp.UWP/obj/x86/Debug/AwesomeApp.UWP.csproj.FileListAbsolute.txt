@@ -314,6 +314,7 @@ C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp.UWP\obj\x86\De
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp.UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160679180000000.json
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885238160000000.json
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\e_sqlite3.dll
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\Xamarin.Forms.Platform.UAP\Xamarin.Forms.Platform.UAP.xr.xml
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\Microsoft.UI.Xaml\DensityStyles\Compact.xbf
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\App.xbf
@@ -332,6 +333,11 @@ C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UW
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\Rg.Plugins.Popup.dll
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\Rg.Plugins.Popup.pdb
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\System.Runtime.dll
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\SQLite-net.dll
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\SQLitePCLRaw.batteries_green.dll
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\SQLitePCLRaw.core.dll
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\Microsoft.Graphics.Canvas.dll
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\Microsoft.Graphics.Canvas.winmd
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\Xamarin.Forms.Core.dll
@@ -381,9 +387,3 @@ C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UW
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160679180000000.json
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885238160000000.json
-C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\e_sqlite3.dll
-C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\SQLite-net.dll
-C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\SQLitePCLRaw.batteries_green.dll
-C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\SQLitePCLRaw.batteries_v2.dll
-C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\SQLitePCLRaw.core.dll
-C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.UWP\bin\x86\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
