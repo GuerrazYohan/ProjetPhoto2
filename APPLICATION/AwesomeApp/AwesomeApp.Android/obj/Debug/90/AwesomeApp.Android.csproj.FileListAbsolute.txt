@@ -1084,3 +1084,4 @@ C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.An
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.Android\obj\Debug\90\android\assets\SQLitePCLRaw.lib.e_sqlite3.dll
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.Android\obj\Debug\90\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.Android\obj\Debug\90\android\assets\System.Linq.Expressions.dll
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.Android\bin\Debug\AwesomeApp.dll.mdb

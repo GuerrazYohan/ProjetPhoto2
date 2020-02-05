@@ -7,8 +7,10 @@
              x:Class="AwesomeApp.MainPage">
 
 
-    
+    <!--Contentpage contient tous les composent de la page-->
     <ContentPage.Content>
+
+        <!--ScrollView permet de scroleler lorsque le téléphone-->
         <ScrollView>
             <Grid Margin="16">
             <Grid.RowDefinitions>
@@ -31,11 +33,12 @@
             <StackLayout Grid.Row="2">
 
 
-
-                <Entry TextColor="White" PlaceholderColor="White" HorizontalOptions="Center" MaxLength="30"
+                    <!--TextBox email-->
+                    <Entry TextColor="White" PlaceholderColor="White" HorizontalOptions="Center" MaxLength="30"
                        Placeholder="Username" />
-                
-                <Entry TextColor="White" PlaceholderColor="White" Margin="10" HorizontalOptions="Center" MaxLength="30"
+
+                    <!--TextBox password-->
+                    <Entry TextColor="White" PlaceholderColor="White" Margin="10" HorizontalOptions="Center" MaxLength="30"
                        Placeholder="Password" 
                        IsPassword="True" />
                 
@@ -43,7 +46,9 @@
 
             <StackLayout Grid.Row="3">
                 <!--<Button x:Name="GoPageOnglet" Grid.Row="2" Text="Login" Clicked="PageOnglet_Clicked" />-->
-                <Button x:Name="GoMenu" BackgroundColor="#aa007f" TextColor="White" CornerRadius="15" Grid.Row="2" Text="Login" Clicked="GoMenu_Clicked" />
+
+                    <!---->
+                    <Button x:Name="GoMenu" BackgroundColor="#aa007f" TextColor="White" CornerRadius="15" Grid.Row="2" Text="Login" Clicked="GoMenu_Clicked" />
             </StackLayout>
 
             

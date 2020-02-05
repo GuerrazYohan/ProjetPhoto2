@@ -21,30 +21,17 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="80"/>
-                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-
             <Grid Grid.Row="0">
-                <Label x:Name="lb_Title" Content="Photobooth" Height="67" VerticalAlignment="Center" HorizontalAlignment="Right" DockPanel.Dock="Top" FontSize="40" FontFamily="Viner Hand ITC" Foreground="Magenta" BorderBrush="#00EEFF" BorderThickness="0,0,0,2"/>
+                <Label Content="Username :" Height="40" VerticalAlignment="top" HorizontalAlignment="Center" FontSize="20" Foreground="White" Margin="125,15,240,25" Width="185"/>
+                <TextBox x:Name="tb_Username" Height="25" Width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="Magenta" BorderThickness="0,0,0,2" Foreground="White" SelectionBrush="#00EEFF" Grid.ColumnSpan="2" Margin="121,0" CaretBrush="Magenta"/>
             </Grid>
             <Grid Grid.Row="1">
-                <Label Content="Username :" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="White" Margin="125,59,240,25" Width="185"/>
-                <TextBox x:Name="tb_Username" Height="25" Width="300" VerticalAlignment="Bottom" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="Magenta" BorderThickness="0,0,0,2" Foreground="White" SelectionBrush="#00EEFF" Grid.ColumnSpan="2" Margin="121,0" CaretBrush="Magenta"/>
+                <Label Content="Password :" Height="40" VerticalAlignment="top" HorizontalAlignment="Center" FontSize="20" Foreground="White" Margin="125,15,240,25" Width="184"/>
+                <PasswordBox x:Name="tb_Mdp" Height="25" Width="300" VerticalAlignment="center" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="Magenta" BorderThickness="0,0,0,2" Foreground="White" SelectionBrush="#00EEFF" Grid.ColumnSpan="2" Margin="121,0" CaretBrush="Magenta" />
             </Grid>
-            <Grid Grid.Row="2">
-                <Label Content="Password :" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Foreground="White" Margin="125,15,241,25" Width="184"/>
-                <TextBox x:Name="tb_Mdp" Height="25" Width="300" VerticalAlignment="Bottom" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="Magenta" BorderThickness="0,0,0,2" Foreground="White" SelectionBrush="#00EEFF" Grid.ColumnSpan="2" Margin="121,0" CaretBrush="Magenta" />
-
-            </Grid>
-            <Grid Grid.Row="3">
-                <Button Name="btn_Login" Foreground="White" Padding="0" BorderBrush="{x:Null}" Click="Btn_Login_Click" Margin="150,40,150,40" Grid.ColumnSpan="2">
-                    <Button.Background>
-                        <ImageBrush ImageSource="img/Login.png" Stretch="Uniform" AlignmentX="Right"/>
-                    </Button.Background> Login
-                </Button>
-            </Grid>
+            
         </Grid>
     </Grid>
 </UserControl>

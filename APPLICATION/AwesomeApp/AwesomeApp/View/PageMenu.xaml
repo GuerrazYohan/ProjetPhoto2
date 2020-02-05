@@ -63,13 +63,15 @@
             
                 <Label Text="PhotoBooth" Grid.Row="0" Grid.ColumnSpan="3" Style="{StaticResource TextMenu}" ></Label>
 
-                <Button x:Name="GoEvent"  ImageSource="@drawable/Agenda3.ico"  Grid.Row="1" Grid.ColumnSpan="3"  Clicked="GoEvent_Clicked" Text="Evenement"
+        
+                <Button x:Name="GoScan" ImageSource="@mipmap/PhotosScan.ico" Grid.Row="1" Grid.ColumnSpan="3" Clicked="GoScan_Clicked" Text="Scanner"
         Style="{StaticResource LargeButton}"></Button>
 
+    
                 <Button x:Name="GoProfil" ImageSource="@mipmap/Profile4.ico" Grid.Row="2" Grid.ColumnSpan="3" Clicked="GoProfil_Clicked" Text="Profil"
         Style="{StaticResource LargeButton}"></Button>
 
-                <Button x:Name="GoScan" ImageSource="@mipmap/PhotosScan.ico" Grid.Row="3" Grid.ColumnSpan="3" Clicked="GoScan_Clicked" Text="Scanner"
+                <Button x:Name="GoEvent"  ImageSource="@drawable/Agenda3.ico"  Grid.Row="3" Grid.ColumnSpan="3"  Clicked="GoEvent_Clicked" Text="Commentaire"
         Style="{StaticResource LargeButton}"></Button>
 
                 <Button ImageSource="@mipmap/logout" Grid.Row="4" Grid.ColumnSpan="3" Clicked="GoDeco_Clicked" Text="Deconnexion"
