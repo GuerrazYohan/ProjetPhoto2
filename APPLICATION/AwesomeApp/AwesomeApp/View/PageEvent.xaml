@@ -33,6 +33,24 @@
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
 
+
+            <Style x:Key="StyleBox" TargetType="Editor">
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontSize" Value="Subtitle" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="HeightRequest" Value="100" />
+            </Style>
+
+            <Style x:Key="LargeButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#aa007f"/>
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderRadius" Value="20"/>
+                <Setter Property="FontSize" Value="Subtitle" />
+                <Setter Property="Padding" Value="15" />
+                <Setter Property="Margin" Value="3"/>
+            </Style>
+
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -48,39 +66,55 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
                 <StackLayout Grid.Row="0">
 
                 </StackLayout>
 
                 
                 <!--Grid n°1 avec Image plus Titre de la page-->
-                <StackLayout Grid.Row="1">
+                <StackLayout Grid.Row="1" Grid.ColumnSpan="3">
                     <Image Source="@drawable/Agenda3"  Style="{StaticResource StyleImage1}"></Image>
-                    <Label Text="Evenement" Style="{StaticResource StyleLabel}"/>
+                    <Label Text="Commentaire" Style="{StaticResource StyleLabel}"/>
+
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Grid.ColumnSpan="3">
+                   
+                    <Label Text="Icone Réseaux sociaux" Style="{StaticResource StyleLabel}"/>
 
                 </StackLayout>
 
                 <!--Grid n°2 pour le contenue de la page-->
-                <StackLayout Grid.Row="2">
+                <StackLayout Grid.Row="3" Grid.ColumnSpan="3">
 
-                    <Label Text="Bientôt disponible!"
+                    <!--<Label Text="Bientôt disponible!"
                        TextColor="White" FontSize="Title"
                         VerticalOptions="CenterAndExpand" 
                         HorizontalOptions="CenterAndExpand">
                         
-                    </Label>
+                    </Label>-->
+
+
+                    <Editor Placeholder="Laisser nous un commentaire svp " Style="{StaticResource StyleBox}"  />
+
 
                 </StackLayout>
 
-                    <!--<StackLayout Grid.Row="3">
-
-                    </StackLayout>-->
+                    <StackLayout Grid.Row="4">
+                        <Button x:Name="GoMessage" Text="Envoyer" Grid.Row="4" Grid.ColumnSpan="3" Clicked="Envoie_Clicked" Style="{StaticResource LargeButton}"></Button>
+                </StackLayout>
 
                 <!--Grid n°4 avec ImageBouton pour retourner à la page Menu-->
-                <StackLayout Grid.Row="4">
+                <StackLayout Grid.Row="5" Grid.ColumnSpan="3">
 
                     <ImageButton Source="@drawable/Home.ico"
                         VerticalOptions="CenterAndExpand"

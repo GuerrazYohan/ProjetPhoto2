@@ -20,5 +20,10 @@ namespace AwesomeApp.View
         {
             Navigation.PushAsync(new PageMenu());
         }
+
+        private void Envoie_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageMenu());
+        }
     }
 }
