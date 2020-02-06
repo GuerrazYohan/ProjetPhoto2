@@ -109,8 +109,8 @@
 
                 </StackLayout>
 
-                    <StackLayout Grid.Row="4">
-                        <Button x:Name="GoMessage" Text="Envoyer" Grid.Row="4" Grid.ColumnSpan="3" Clicked="Envoie_Clicked" Style="{StaticResource LargeButton}"></Button>
+                <StackLayout Grid.Row="4" Grid.ColumnSpan="3">
+                        <Button x:Name="GoMessage" Text="Envoyer" Clicked="Envoie_Clicked" Style="{StaticResource LargeButton}"></Button>
                 </StackLayout>
 
                 <!--Grid n°4 avec ImageBouton pour retourner à la page Menu-->
