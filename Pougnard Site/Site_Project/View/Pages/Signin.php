@@ -31,6 +31,14 @@ if(isset($_POST['forminscription']))
                     $insertmbr = $bdd->prepare("INSERT INTO membres(pseudo , mail , motdepasse) VALUES(?,?,?)");
                     $insertmbr->execute(array($pseudo, $mail, $mdp));
                     $erreur = "Votre Compte a bien été créer";
+                    /*Verification de l'email*/
+                    if ($insertmbr->errorCode() == '00000') {
+                      $id = $bdd->lastInsertId();
+                      $_SESSION['id']=$id;
+                    }
+                    else {
+                      $erreur = "L'adresse mail est déjà utiliser";
+                    }
                 }
                 else {
                   $erreur = "Vos mot de passe ne correspondent pas !";
