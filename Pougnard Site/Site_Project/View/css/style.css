@@ -1,5 +1,9 @@
+.carousel{
+  background-color: black;
+}
 .img_carousel{
-  height: 400px;
+ margin-top: auto;
+ margin-bottom: auto;
 }
 .Signin {
   margin-top: 1%;
