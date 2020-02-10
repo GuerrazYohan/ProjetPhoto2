@@ -63,6 +63,10 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
+
+
+                    <Button Text="Scanner" Clicked="OpenScanner"></Button>
+
             </StackLayout>
 
                 <!--<StackLayout Grid.Row="3">

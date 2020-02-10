@@ -1328,7 +1328,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "IO.Swagger": "1.0.0",
           "Microsoft.AspNet.WebApi.Client": "5.2.7",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.9",
           "Newtonsoft.Json": "12.0.3",
@@ -1343,15 +1342,6 @@
         },
         "runtime": {
           "bin/placeholder/AwesomeApp.dll": {}
-        }
-      },
-      "IO.Swagger/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/IO.Swagger.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IO.Swagger.dll": {}
         }
       }
     },
@@ -2608,7 +2598,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "IO.Swagger": "1.0.0",
           "Microsoft.AspNet.WebApi.Client": "5.2.7",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.9",
           "Newtonsoft.Json": "12.0.3",
@@ -2623,15 +2612,6 @@
         },
         "runtime": {
           "bin/placeholder/AwesomeApp.dll": {}
-        }
-      },
-      "IO.Swagger/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/IO.Swagger.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IO.Swagger.dll": {}
         }
       }
     },
@@ -3888,7 +3868,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "IO.Swagger": "1.0.0",
           "Microsoft.AspNet.WebApi.Client": "5.2.7",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.9",
           "Newtonsoft.Json": "12.0.3",
@@ -3903,15 +3882,6 @@
         },
         "runtime": {
           "bin/placeholder/AwesomeApp.dll": {}
-        }
-      },
-      "IO.Swagger/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/IO.Swagger.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IO.Swagger.dll": {}
         }
       }
     },
@@ -5168,7 +5138,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "IO.Swagger": "1.0.0",
           "Microsoft.AspNet.WebApi.Client": "5.2.7",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.9",
           "Newtonsoft.Json": "12.0.3",
@@ -5183,15 +5152,6 @@
         },
         "runtime": {
           "bin/placeholder/AwesomeApp.dll": {}
-        }
-      },
-      "IO.Swagger/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/IO.Swagger.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IO.Swagger.dll": {}
         }
       }
     }
@@ -9584,17 +9544,11 @@
       "type": "project",
       "path": "../AwesomeApp/AwesomeApp.csproj",
       "msbuildProject": "../AwesomeApp/AwesomeApp.csproj"
-    },
-    "IO.Swagger/1.0.0": {
-      "type": "project",
-      "path": "../../../../ApiC#/src/IO.Swagger/IO.Swagger.csproj",
-      "msbuildProject": "../../../../ApiC#/src/IO.Swagger/IO.Swagger.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
       "AwesomeApp >= 1.0.0",
-      "IO.Swagger >= 1.0.0",
       "Microsoft.AspNet.WebApi.Client >= 5.2.7",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.9",
       "Newtonsoft.Json >= 12.0.3",
@@ -9637,9 +9591,6 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Guerraz Yohan\\Desktop\\ApiC#\\src\\IO.Swagger\\IO.Swagger.csproj": {
-              "projectPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ApiC#\\src\\IO.Swagger\\IO.Swagger.csproj"
-            },
             "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp\\AwesomeApp.csproj": {
               "projectPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp\\AwesomeApp.csproj"
             }

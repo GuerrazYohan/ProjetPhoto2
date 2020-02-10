@@ -26,6 +26,14 @@ namespace AwesomeApp.Model
 
     }
 
+    public class Photo
+    {
+        [PrimaryKey, AutoIncrement]
+        public int ID { get; set; }
+        public string email { get; set; }
+        public string RawBytesQR { get; set; }
+    }
+
 }
 
 

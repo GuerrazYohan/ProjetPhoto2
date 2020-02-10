@@ -1759,15 +1759,6 @@
           "build/Xamarin.Forms.props": {},
           "build/Xamarin.Forms.targets": {}
         }
-      },
-      "IO.Swagger/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/IO.Swagger.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/IO.Swagger.dll": {}
-        }
       }
     }
   },
@@ -6319,16 +6310,10 @@
         "xamarin.forms.4.4.0.991537.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
-    },
-    "IO.Swagger/1.0.0": {
-      "type": "project",
-      "path": "../../../../ApiC#/src/IO.Swagger/IO.Swagger.csproj",
-      "msbuildProject": "../../../../ApiC#/src/IO.Swagger/IO.Swagger.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "IO.Swagger >= 1.0.0",
       "Microsoft.AspNet.WebApi.Client >= 5.2.7",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.9",
       "NETStandard.Library >= 2.0.3",
@@ -6372,11 +6357,7 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {
-            "C:\\Users\\Guerraz Yohan\\Desktop\\ApiC#\\src\\IO.Swagger\\IO.Swagger.csproj": {
-              "projectPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ApiC#\\src\\IO.Swagger\\IO.Swagger.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

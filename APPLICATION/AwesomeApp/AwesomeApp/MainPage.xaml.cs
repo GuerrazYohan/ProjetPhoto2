@@ -5,9 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
-using IO.Swagger.Api;
-using IO.Swagger.Model;
-using IO.Swagger.Client;
 using AwesomeApp.View;
 
 namespace AwesomeApp

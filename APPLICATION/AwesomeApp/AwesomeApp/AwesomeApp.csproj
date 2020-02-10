@@ -40,8 +40,4 @@
   <ItemGroup>
     <Folder Include="Controller\" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\ApiC#\src\IO.Swagger\IO.Swagger.csproj" />
-  </ItemGroup>
 </Project>

@@ -4,17 +4,6 @@
     "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp.UWP\\AwesomeApp.UWP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Guerraz Yohan\\Desktop\\ApiC#\\src\\IO.Swagger\\IO.Swagger.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Guerraz Yohan\\Desktop\\ApiC#\\src\\IO.Swagger\\IO.Swagger.csproj",
-        "projectName": "IO.Swagger",
-        "projectPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ApiC#\\src\\IO.Swagger\\IO.Swagger.csproj"
-      },
-      "frameworks": {
-        "net45": {}
-      }
-    },
     "C:\\Users\\Guerraz Yohan\\Desktop\\ProjetPhoto2\\APPLICATION\\AwesomeApp\\AwesomeApp.UWP\\AwesomeApp.UWP.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -145,11 +134,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "projectReferences": {
-              "C:\\Users\\Guerraz Yohan\\Desktop\\ApiC#\\src\\IO.Swagger\\IO.Swagger.csproj": {
-                "projectPath": "C:\\Users\\Guerraz Yohan\\Desktop\\ApiC#\\src\\IO.Swagger\\IO.Swagger.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

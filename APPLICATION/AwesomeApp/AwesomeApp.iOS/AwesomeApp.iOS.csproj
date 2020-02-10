@@ -173,10 +173,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\ApiC#\src\IO.Swagger\IO.Swagger.csproj">
-      <Project>{afa0f357-d368-48cb-b262-66faf3f7ce77}</Project>
-      <Name>IO.Swagger</Name>
-    </ProjectReference>
     <ProjectReference Include="..\AwesomeApp\AwesomeApp.csproj">
       <Project>{769AD825-8708-4FFF-BE54-8A970E20A34F}</Project>
       <Name>AwesomeApp</Name>
