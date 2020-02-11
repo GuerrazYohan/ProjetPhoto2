@@ -22,6 +22,7 @@ namespace AwesomeApp.View
             ButtonScanCustom.Clicked += ButtonScanCustom_Clicked;
             ButtonScanContinuously.Clicked += ButtonScanContinuously_Clicked;
             ButtonScanCustomPage.Clicked += ButtonScanCustomPage_Clicked;
+            
         }
 
 
@@ -53,7 +54,7 @@ namespace AwesomeApp.View
             scanPage = new ZXingScannerPage(new ZXing.Mobile.MobileBarcodeScanningOptions { DelayBetweenContinuousScans = 3000 });
             scanPage.OnScanResult += (result) =>
                 Device.BeginInvokeOnMainThread(() =>
-                   DisplayAlert("Scanned Barcode", result.Text, "OK"));
+                   DisplayActionSheet("Scanned Barcode", result.Text, "Cancel", null, "Partager", "Télécharger"));
 
             await Navigation.PushModalAsync(scanPage);
         }

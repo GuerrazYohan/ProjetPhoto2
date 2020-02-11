@@ -68,6 +68,8 @@
                     <Button x:Name="ButtonScanContinuously" Text="Scan Continously"></Button>
                     <Button x:Name="ButtonScanCustomPage" Text="Scan CustomPage"></Button>
 
+                    <BoxView x:Name="VoirPhoto"></BoxView>
+                
             </StackLayout>
 
                 <!--<StackLayout Grid.Row="3">

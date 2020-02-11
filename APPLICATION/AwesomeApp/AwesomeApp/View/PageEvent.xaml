@@ -87,10 +87,25 @@
 
                 </StackLayout>
 
-                <StackLayout Grid.Row="2" Grid.ColumnSpan="3">
+                <StackLayout Grid.Row="2" Grid.Column="0">
                    
-                    <Label Text="Icone Réseaux sociaux" Style="{StaticResource StyleLabel}"/>
+                    <!--<Label Text="Icone Réseaux sociaux" Style="{StaticResource StyleLabel}"/>-->
+                    <Image Source="@drawable/fb"></Image>
+                    
+                </StackLayout>
+                <StackLayout Grid.Row="2" Grid.Column="1">
 
+                    <!--<Label Text="Icone Réseaux sociaux" Style="{StaticResource StyleLabel}"/>-->
+                    
+                    <Image Source="@drawable/insta"></Image>
+                   
+                </StackLayout>
+
+                <StackLayout Grid.Row="2" Grid.Column="2">
+
+                    <!--<Label Text="Icone Réseaux sociaux" Style="{StaticResource StyleLabel}"/>-->
+                   
+                    <Image Source="@drawable/Mail"></Image>
                 </StackLayout>
 
                 <!--Grid n°2 pour le contenue de la page-->
@@ -109,7 +124,7 @@
 
                 </StackLayout>
 
-                    <StackLayout Grid.Row="4">
+                <StackLayout Grid.Row="4" Grid.ColumnSpan="3">
                         <Button x:Name="GoMessage" Text="Envoyer" Grid.Row="4" Grid.ColumnSpan="3" Clicked="Envoie_Clicked" Style="{StaticResource LargeButton}"></Button>
                 </StackLayout>
 
