@@ -6,54 +6,112 @@ using System.Threading.Tasks;
 using AwesomeApp.View;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using ZXing.Net.Mobile.Forms;
 
 namespace AwesomeApp.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageScan : ContentPage
     {
-        public Action<object> OnScanResult { get; private set; }
-        public bool IsScanning { get; private set; }
 
+        ZXingScannerPage scanPage;
         public PageScan()
         {
             InitializeComponent();
+            ButtonScanDefault.Clicked += ButtonScanDefault_Clicked;
+            ButtonScanCustom.Clicked += ButtonScanCustom_Clicked;
+            ButtonScanContinuously.Clicked += ButtonScanContinuously_Clicked;
+            ButtonScanCustomPage.Clicked += ButtonScanCustomPage_Clicked;
         }
 
 
-
-
-        private void OpenScanner(object sender, EventArgs e)
+        //Permet de Scanner les QR code et les afficher dans une autre page
+        private async void ButtonScanCustomPage_Clicked(object sender, EventArgs e)
         {
-            Scanner();
-        }
+            var customScanPage = new PageScan2();
+            scanPage = new ZXingScannerPage();
+            scanPage.OnScanResult += (result) => {
+                scanPage.IsScanning = false;
 
-        public async void Scanner()
-        {
-
-            var ScannerPage = new PageScan();
-
-            ScannerPage.OnScanResult += (result) => {
-                // Parar de escanear
-                ScannerPage.IsScanning = false;
-
-                // Alert com o código escaneado
+                //Do something with result
                 Device.BeginInvokeOnMainThread(() => {
-                    Navigation.PopAsync();
-                    DisplayAlert("Código escaneado", result , "OK");
+                    Navigation.PopModalAsync();
+                    DisplayAlert("Scanned Barcode", result.Text, "OK");
                 });
             };
 
-
-            await Navigation.PushAsync(ScannerPage);
-
+            await Navigation.PushModalAsync(scanPage);
         }
 
-        private void DisplayAlert(string v1, object text, string v2)
+
+
+
+
+        //Permet de Scanner les QR code et les code barre en continue
+        private async void ButtonScanContinuously_Clicked(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            scanPage = new ZXingScannerPage(new ZXing.Mobile.MobileBarcodeScanningOptions { DelayBetweenContinuousScans = 3000 });
+            scanPage.OnScanResult += (result) =>
+                Device.BeginInvokeOnMainThread(() =>
+                   DisplayAlert("Scanned Barcode", result.Text, "OK"));
+
+            await Navigation.PushModalAsync(scanPage);
         }
+
+
+        //Permet de Scanner les QR code et les code barre avec flache
+        private async void ButtonScanCustom_Clicked(object sender, EventArgs e)
+        {
+            // Create our custom overlay
+            var customOverlay = new StackLayout
+            {
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.FillAndExpand
+            };
+            var torch = new Button
+            {
+                Text = "Toggle Torch"
+            };
+            torch.Clicked += delegate {
+                scanPage.ToggleTorch();
+            };
+            customOverlay.Children.Add(torch);
+
+            scanPage = new ZXingScannerPage(new ZXing.Mobile.MobileBarcodeScanningOptions { AutoRotate = true }, customOverlay: customOverlay);
+            scanPage.OnScanResult += (result) => {
+                scanPage.IsScanning = false;
+
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    Navigation.PopModalAsync();
+                    DisplayAlert("Scanned Barcode", result.Text, "OK");
+                });
+            };
+            await Navigation.PushModalAsync(scanPage);
+        }
+
+
+
+
+        //Permet de Scanner les QR code et les code barre
+        private async void ButtonScanDefault_Clicked(object sender, EventArgs e)
+        {
+            scanPage = new ZXingScannerPage();
+            scanPage.OnScanResult += (result) => {
+                scanPage.IsScanning = false;
+
+                //Do something with result
+                Device.BeginInvokeOnMainThread(() => {
+                    Navigation.PopModalAsync();
+                    DisplayAlert("Scanned Barcode", result.Text, "OK");
+                });
+            };
+
+            await Navigation.PushModalAsync(scanPage);
+        }
+
+
+
 
         private void GoPageHome_Clicked(object sender, EventArgs e)
         {

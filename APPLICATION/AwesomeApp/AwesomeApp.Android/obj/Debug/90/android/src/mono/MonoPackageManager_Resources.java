@@ -42,6 +42,7 @@ public class MonoPackageManager_Resources {
 		"SQLitePCLRaw.lib.e_sqlite3.dll",
 		"SQLitePCLRaw.provider.e_sqlite3.dll",
 		"Swashbuckle.Swagger.dll",
+		"Symbol.XamarinEMDK.dll",
 		"System.Diagnostics.DiagnosticSource.dll",
 		"System.Net.Http.Formatting.dll",
 		"System.Text.Encodings.Web.dll",

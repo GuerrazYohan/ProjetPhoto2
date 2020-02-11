@@ -42,7 +42,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20"/>
                     <RowDefinition Height="auto"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
@@ -63,9 +63,10 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
-
-
-                    <Button Text="Scanner" Clicked="OpenScanner"></Button>
+                    <Button x:Name="ButtonScanDefault" Text="Scan Default"></Button>
+                    <Button x:Name="ButtonScanCustom" Text="Scan Custom"></Button>
+                    <Button x:Name="ButtonScanContinuously" Text="Scan Continously"></Button>
+                    <Button x:Name="ButtonScanCustomPage" Text="Scan CustomPage"></Button>
 
             </StackLayout>
 

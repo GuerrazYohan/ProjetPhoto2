@@ -164,3 +164,9 @@ C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.iO
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.iOS\obj\iPhoneSimulator\Debug\AwesomeApp.iOS.csproj.CopyComplete
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.iOS\obj\iPhoneSimulator\Debug\AwesomeApp.iOS.exe
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.iOS\obj\iPhoneSimulator\Debug\AwesomeApp.iOS.pdb
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.iOS\bin\iPhoneSimulator\Debug\AwesomeApp.dll.mdb
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.iOS\bin\iPhoneSimulator\Debug\ZXing.Net.Mobile.Core.dll
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.iOS\bin\iPhoneSimulator\Debug\ZXingNetMobile.dll
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.iOS\bin\iPhoneSimulator\Debug\zxing.portable.dll
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.iOS\bin\iPhoneSimulator\Debug\ZXing.Net.Mobile.Forms.dll
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp.iOS\bin\iPhoneSimulator\Debug\ZXing.Net.Mobile.Forms.iOS.dll
