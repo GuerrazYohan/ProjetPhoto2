@@ -1,28 +1,26 @@
+.btn_card{
+  margin-bottom: 3%;
+}
 .carousel{
   background-color: black;
 }
 .img_carousel{
- margin-top: auto;
- margin-bottom: auto;
+
 }
 .Signin {
   margin-top: 1%;
   margin-left: 20%;
 }
-
 .Signin .card {
   background: rgba(0, 0, 0, .6);
 }
-
 .Signin label {
   color: white;
   font-size: 20px;
 }
-
 .Signin input {
   color: white;
 }
-
 .btn_home {
   margin: 1%;
 }
@@ -44,6 +42,10 @@
 .login input {
   color: white;
 }
+#btn_home_dash{
+  margin-right: 1%;
+  margin-top: 1%;
+}
 #Body1
 {
     background-image: url(../img/bg_2.jpg);
@@ -64,8 +66,14 @@
   background: transparent;
 }
 #bg_dash{
-  background-color: purple;
+  padding: 2%;
+  margin-top: 2%;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 850px;
+  background: rgba(110, 58, 148, .8);
 }
+
 .dropdown-content li > a, .dropdown-content li > span {
     color: #7500fb !important;
 }
