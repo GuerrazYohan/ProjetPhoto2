@@ -62,3 +62,5 @@ C:\Users\SN2\Desktop\ProjetPhoto2\Marie_C#\Photobooth\obj\Debug\Photobooth.cspro
 C:\Users\SN2\Desktop\ProjetPhoto2\Marie_C#\Photobooth\obj\Debug\Photobooth.csproj.CopyComplete
 C:\Users\SN2\Desktop\ProjetPhoto2\Marie_C#\Photobooth\obj\Debug\Photobooth.exe
 C:\Users\SN2\Desktop\ProjetPhoto2\Marie_C#\Photobooth\obj\Debug\Photobooth.pdb
+C:\Users\SN2\Desktop\ProjetPhoto2\Marie_C#\Photobooth\bin\Debug\EDSDKLib.dll
+C:\Users\SN2\Desktop\ProjetPhoto2\Marie_C#\Photobooth\bin\Debug\EDSDKLib.pdb

@@ -16,14 +16,20 @@
 
         <!-- #################################### Navbar ########################### -->
         <Grid Grid.Row="0" Name="Button_Container" Background="Black">
-            <Label x:Name="lb_Title" Content="Photobooth" Height="45" VerticalAlignment="Center" HorizontalAlignment="Right" DockPanel.Dock="Top" FontSize="30" FontFamily="Viner Hand ITC" Foreground="Magenta" BorderBrush="#00EEFF" BorderThickness="0,0,0,2" Margin="0,0,630,0"/>
+            <Label x:Name="lb_Title" Content="Photobooth"  Height="45" VerticalAlignment="Center" HorizontalAlignment="Right" DockPanel.Dock="Top" FontSize="30" FontFamily="Viner Hand ITC" Foreground="Magenta" BorderBrush="#00EEFF" BorderThickness="0,0,0,2" Margin="0,0,622,0" Width="170"/>
 
-            <Button Name="btn_Login" Foreground="White" Padding="0" BorderBrush="{x:Null}" Click="Btn_Login_Click" Margin="630,0,0,0">
+            <Button Name="btn_Login" Foreground="White" Padding="0" BorderBrush="{x:Null}" Click="Btn_Login_Click" Margin="630,0,0,0" Visibility="Hidden">
                 <Button.Background>
                     <ImageBrush ImageSource="view/img/Login.png" Stretch="Uniform" AlignmentX="Right"/>
                 </Button.Background> Login
             </Button>
         </Grid>
+
+        <Button Name="btn_Start" Foreground="White" Padding="0" BorderBrush="{x:Null}" Click="Btn_Start_Click" Margin="630,0,0,0" Visibility="Hidden">
+            <Button.Background>
+                <ImageBrush ImageSource="view/img/start.png" Stretch="Uniform" AlignmentX="Right"/>
+            </Button.Background> Démarer
+        </Button>
 
         <!-- #################################### Container ########################### -->
         <Grid Grid.Row="1" Name="Window_Container">
