@@ -71,34 +71,37 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="compte.cs">
-      <DependentUpon>PhotoboothModel.tt</DependentUpon>
+      <DependentUpon>PhotoboothBDD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="compte_has_photo.cs">
+      <DependentUpon>PhotoboothBDD.tt</DependentUpon>
     </Compile>
     <Compile Include="Controleur\DaoCompte.cs" />
     <Compile Include="Controleur\DaoConnection.cs" />
     <Compile Include="Controleur\DaoEvenements.cs" />
     <Compile Include="evenements.cs">
-      <DependentUpon>PhotoboothModel.tt</DependentUpon>
+      <DependentUpon>PhotoboothBDD.tt</DependentUpon>
     </Compile>
     <Compile Include="evenements_attente.cs">
-      <DependentUpon>PhotoboothModel.tt</DependentUpon>
+      <DependentUpon>PhotoboothBDD.tt</DependentUpon>
     </Compile>
     <Compile Include="photo.cs">
-      <DependentUpon>PhotoboothModel.tt</DependentUpon>
+      <DependentUpon>PhotoboothBDD.tt</DependentUpon>
     </Compile>
-    <Compile Include="PhotoboothModel.Context.cs">
+    <Compile Include="PhotoboothBDD.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PhotoboothModel.Context.tt</DependentUpon>
+      <DependentUpon>PhotoboothBDD.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="PhotoboothModel.cs">
+    <Compile Include="PhotoboothBDD.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PhotoboothModel.tt</DependentUpon>
+      <DependentUpon>PhotoboothBDD.tt</DependentUpon>
     </Compile>
-    <Compile Include="PhotoboothModel.Designer.cs">
+    <Compile Include="PhotoboothBDD.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PhotoboothModel.edmx</DependentUpon>
+      <DependentUpon>PhotoboothBDD.edmx</DependentUpon>
     </Compile>
     <Compile Include="View\UC_Home.xaml.cs">
       <DependentUpon>UC_Home.xaml</DependentUpon>
@@ -146,12 +149,12 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <EntityDeploy Include="PhotoboothModel.edmx">
+    <EntityDeploy Include="PhotoboothBDD.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PhotoboothModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>PhotoboothBDD.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="PhotoboothModel.edmx.diagram">
-      <DependentUpon>PhotoboothModel.edmx</DependentUpon>
+    <None Include="PhotoboothBDD.edmx.diagram">
+      <DependentUpon>PhotoboothBDD.edmx</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -172,21 +175,23 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="PhotoboothModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PhotoboothModel.edmx</DependentUpon>
-      <LastGenOutput>PhotoboothModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="PhotoboothModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PhotoboothModel.edmx</DependentUpon>
-      <LastGenOutput>PhotoboothModel.cs</LastGenOutput>
-    </Content>
     <Resource Include="View\img\start.png" />
     <Resource Include="View\img\config.png" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PhotoboothBDD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>PhotoboothBDD.Context.cs</LastGenOutput>
+      <DependentUpon>PhotoboothBDD.edmx</DependentUpon>
+    </Content>
+    <Content Include="PhotoboothBDD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PhotoboothBDD.edmx</DependentUpon>
+      <LastGenOutput>PhotoboothBDD.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

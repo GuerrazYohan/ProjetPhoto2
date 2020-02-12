@@ -17,8 +17,7 @@ namespace Photobooth
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public compte()
         {
-            this.evenements = new HashSet<evenements>();
-            this.photo = new HashSet<photo>();
+            this.compte_has_photo = new HashSet<compte_has_photo>();
         }
     
         public int idCompte { get; set; }
@@ -28,8 +27,6 @@ namespace Photobooth
         public string Email { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<evenements> evenements { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<photo> photo { get; set; }
+        public virtual ICollection<compte_has_photo> compte_has_photo { get; set; }
     }
 }
