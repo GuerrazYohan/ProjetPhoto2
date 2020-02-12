@@ -1,0 +1,12 @@
+C:\Users\venki\Desktop\PhotoBooth\EDSDKLib-1.1.2\EDSDKLib-1.1.2\EDSDKLib\bin\Debug\EDSDKLib.dll
+C:\Users\venki\Desktop\PhotoBooth\EDSDKLib-1.1.2\EDSDKLib-1.1.2\EDSDKLib\bin\Debug\EDSDKLib.pdb
+C:\Users\venki\Desktop\PhotoBooth\EDSDKLib-1.1.2\EDSDKLib-1.1.2\EDSDKLib\obj\x86\Debug\EDSDKLib.csprojAssemblyReference.cache
+C:\Users\venki\Desktop\PhotoBooth\EDSDKLib-1.1.2\EDSDKLib-1.1.2\EDSDKLib\obj\x86\Debug\EDSDKLib.csproj.CoreCompileInputs.cache
+C:\Users\venki\Desktop\PhotoBooth\EDSDKLib-1.1.2\EDSDKLib-1.1.2\EDSDKLib\obj\x86\Debug\EDSDKLib.dll
+C:\Users\venki\Desktop\PhotoBooth\EDSDKLib-1.1.2\EDSDKLib-1.1.2\EDSDKLib\obj\x86\Debug\EDSDKLib.pdb
+G:\WPF Photobooth\PhotoBooth\EDSDKLib\bin\Debug\EDSDKLib.dll
+G:\WPF Photobooth\PhotoBooth\EDSDKLib\bin\Debug\EDSDKLib.pdb
+G:\WPF Photobooth\PhotoBooth\EDSDKLib\obj\x86\Debug\EDSDKLib.csprojAssemblyReference.cache
+G:\WPF Photobooth\PhotoBooth\EDSDKLib\obj\x86\Debug\EDSDKLib.csproj.CoreCompileInputs.cache
+G:\WPF Photobooth\PhotoBooth\EDSDKLib\obj\x86\Debug\EDSDKLib.dll
+G:\WPF Photobooth\PhotoBooth\EDSDKLib\obj\x86\Debug\EDSDKLib.pdb
