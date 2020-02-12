@@ -7,25 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="Black">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-
-        <Grid Grid.Row="0">
-            <Button BorderThickness="0,0,0,1" Name="btn_Start" Foreground="White" Padding="0" BorderBrush="Magenta" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Height="50">
-                <Button.Background>
-                    <ImageBrush ImageSource="img/start.png" Stretch="Uniform" AlignmentX="Right"/>
-                </Button.Background> Démarer
-            </Button>
-        </Grid>
-        
-        <Grid Grid.Row="1">
-            <Button BorderThickness="0,0,0,1" Name="btn_Config" Foreground="White" Padding="0" BorderBrush="Magenta" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Height="50">
-                <Button.Background>
-                    <ImageBrush ImageSource="img/config.png" Stretch="Uniform" AlignmentX="Right"/>
-                </Button.Background> Configurer
-            </Button>
-        </Grid>
+        <Image Source="img/logo.png">
+            
+        </Image>
     </Grid>
 </UserControl>

@@ -33,6 +33,7 @@ namespace Photobooth
             InitializeComponent();
             UC_Login my_Login = new UC_Login();
             Window_Container.Children.Add(my_Login);
+            btn_Login.Visibility = Visibility.Visible;
         }
 
         private void Btn_Login_Click(object sender, RoutedEventArgs e)
@@ -61,6 +62,18 @@ namespace Photobooth
             UC_Home my_Home = new UC_Home();
             Window_Container.Children.Add(my_Home);
             btn_Login.Visibility = Visibility.Hidden;
+            btn_Start.Visibility = Visibility.Visible;
+            lb_Title.Content = "Bienvenue";
         }
+
+        private void Btn_Start_Click(object sender, RoutedEventArgs e)
+        {
+            Window_Container.Children.Clear();
+            //UC_Home my_Home = new UC_Home();
+            //Window_Container.Children.Add(my_Home);
+            btn_Login.Visibility = Visibility.Hidden;
+            btn_Start.Visibility = Visibility.Hidden;
+        }
+        
     }
 }

@@ -25,11 +25,11 @@
 
             <Grid Grid.Row="0">
                 <Label Content="Username :" Height="40" VerticalAlignment="top" HorizontalAlignment="Center" FontSize="20" Foreground="White" Margin="125,15,240,25" Width="185"/>
-                <TextBox x:Name="tb_Username" Height="25" Width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="Magenta" BorderThickness="0,0,0,2" Foreground="White" SelectionBrush="#00EEFF" Grid.ColumnSpan="2" Margin="121,0" CaretBrush="Magenta"/>
+                <TextBox x:Name="tb_Username" Height="40" Width="300" VerticalAlignment="Center" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="Magenta" BorderThickness="0,0,0,2" Foreground="White" SelectionBrush="#00EEFF" Grid.ColumnSpan="2" Margin="121,0" CaretBrush="Magenta"/>
             </Grid>
             <Grid Grid.Row="1">
                 <Label Content="Password :" Height="40" VerticalAlignment="top" HorizontalAlignment="Center" FontSize="20" Foreground="White" Margin="125,15,240,25" Width="184"/>
-                <PasswordBox x:Name="tb_Mdp" Height="25" Width="300" VerticalAlignment="center" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="Magenta" BorderThickness="0,0,0,2" Foreground="White" SelectionBrush="#00EEFF" Grid.ColumnSpan="2" Margin="121,0" CaretBrush="Magenta" />
+                <PasswordBox x:Name="tb_Mdp" Height="40" Width="300" VerticalAlignment="center" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="Magenta" BorderThickness="0,0,0,2" Foreground="White" SelectionBrush="#00EEFF" Grid.ColumnSpan="2" Margin="121,0" CaretBrush="Magenta" />
             </Grid>
             
         </Grid>
