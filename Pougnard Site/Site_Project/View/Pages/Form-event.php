@@ -24,7 +24,7 @@
               <i class="fas fa-star fa-2x"></i>
             </span>
             <label for="pseudo">Nom de l'évenements :</label>
-            <input type="text" placeholder="de 0 à 20 caractères..." id="pseudo" name="pseudo">
+            <input type="text" placeholder="de 0 à 100 caractères..." id="pseudo" name="pseudo">
           </div>
           <br>
           <div class="form-field">
@@ -49,14 +49,14 @@
               <span style="color: #8e24aa;margin-right: 2%;">
               <i class="fas fa-calendar-alt fa-2x"></i>
             </span>
-              <label>Reserver de :</label>
+              <label>Reserver du :</label>
               <input type="text" class="datepicker">
             </div>
             <div class="col s12 m6">
               <span style="color: #8e24aa;margin-right: 2%;">
               <i class="fas fa-calendar-alt fa-2x"></i>
             </span>
-              <label>à :</label>
+              <label>Jusqu'au :</label>
               <input type="text" class="datepicker">
             </div>
           </div>
