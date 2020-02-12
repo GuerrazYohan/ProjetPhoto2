@@ -39,10 +39,10 @@
 
   <div class="carousel carousel-slider" data-indicators ="true">
     <div class="carousel-item" href="#one!">
-      <img class="img_carousel" src="View/img/img.jpg">
+      <img class="img_carousel" src="View/img/Presentation.jpg">
     </div>
     <div class="carousel-item" href="#two!">
-      <img src="View/img/img2.jpg">
+      <img src="View/img/img.jpg">
     </div>
     <div class="carousel-item" href="#three!">
       <img src="View/img/img3.jpg">

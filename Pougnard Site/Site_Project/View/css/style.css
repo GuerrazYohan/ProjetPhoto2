@@ -22,6 +22,9 @@
 .Signin input {
   color: white;
 }
+.Signin .modal input{
+  color: black;
+}
 .btn_home {
   margin: 1%;
 }
@@ -113,6 +116,11 @@ Overlay Principal*/
 .datepicker-table td.is-today {
  color: rgb(106, 48, 133);
 }
-.datepicker-Signin input{
+/*Couleur du jour choisi*/
+.datepicker-table td.is-selected {
+ background-color: rgb(106, 48, 133);
+ color: #fff;
+}
+.datepicker-Signin input {
   color: black;
 }
