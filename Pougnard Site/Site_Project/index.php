@@ -20,8 +20,6 @@
     <div class="nav-wrapper deep-purple darken-1">
       <a href="#" class="brand-logo center">PhotoBooth</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="#">Infos</a></li>
-        <li><a href="#">Develloper</a></li>
         <li><a href="#">Nous contacter</a></li>
       </ul>
       <ul class="right hide-on-med-and-down">
@@ -81,16 +79,16 @@
         <div class="row">
 
         <div class="col s12 l2 offset-12">
-          <a href="#" class="btn-floating btn-large purple darken-1 darken-3"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.facebook.com/" class="btn-floating btn-large purple darken-1 darken-3"><i class="fab fa-facebook"></i></a>
         </div>
         <div class="col s12 l2 offset-12">
-          <a href="#" class="btn-floating btn-large purple darken-1 darken-3"><i class="fab fa-twitter"></i></a>
+          <a href="https://twitter.com/" class="btn-floating btn-large purple darken-1 darken-3"><i class="fab fa-twitter"></i></a>
         </div>
         <div class="col s12 l2 offset-12">
-          <a href="#" class="btn-floating btn-large purple darken-1 darken-3"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.instagram.com/?hl=en" class="btn-floating btn-large purple darken-1 darken-3"><i class="fab fa-instagram"></i></a>
       </div>
       <div class="col s12 l2 offset-12">
-          <a href="#" class="btn-floating btn-large purple darken-1 darken-3"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/" class="btn-floating btn-large purple darken-1 darken-3"><i class="fab fa-linkedin"></i></a>
       </div>
     </div>
     </div>
