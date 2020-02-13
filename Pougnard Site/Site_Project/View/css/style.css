@@ -18,8 +18,12 @@
   color: white;
   font-size: 20px;
 }
+
 .Signin input {
   color: white;
+}
+.Signin .modal input{
+  color: black;
 }
 .btn_home {
   margin: 1%;
@@ -70,12 +74,10 @@
   margin-top: 2%;
   overflow-y: scroll;
   height: 850px;
-  background: rgba(110, 58, 148, .8);
-} 
+  background: rgba(110, 58, 148, .4);
+}
 
-/*
- *  STYLE 2
- */
+/*Style pour la scrollbar du dashboard*/
 
 #bg_dash::-webkit-scrollbar-track
 {
@@ -94,9 +96,31 @@
 {
 	border-radius: 10px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: #D62929;
+	background-color: #663396;
 }
-
+/*Style du drop down du dashboard*/
 .dropdown-content li > a, .dropdown-content li > span {
     color: #7500fb !important;
+}
+/*Style des datepicker dans le form de la demande d'événements
+
+Overlay Principal*/
+.datepicker-date-display {
+ background-color: rgb(106, 48, 133);
+}
+/*Couleur des boutons*/
+.datepicker-cancel, .datepicker-clear, .datepicker-today, .datepicker-done {
+ color:rgb(106, 48, 133);
+}
+/*Couleur du jour actuel*/
+.datepicker-table td.is-today {
+ color: rgb(106, 48, 133);
+}
+/*Couleur du jour choisi*/
+.datepicker-table td.is-selected {
+ background-color: rgb(106, 48, 133);
+ color: #fff;
+}
+.datepicker-Signin input {
+  color: black;
 }

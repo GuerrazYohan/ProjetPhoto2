@@ -17,17 +17,14 @@ namespace Photobooth
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public photo()
         {
-            this.compte = new HashSet<compte>();
+            this.compte_has_photo = new HashSet<compte_has_photo>();
         }
     
         public int idPhoto { get; set; }
         public string CheminDacces { get; set; }
         public string RawBytesQR { get; set; }
-        public int Evenements_idEvenements { get; set; }
-        public int Evenements_Compte_idCompte { get; set; }
     
-        public virtual evenements evenements { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<compte> compte { get; set; }
+        public virtual ICollection<compte_has_photo> compte_has_photo { get; set; }
     }
 }
