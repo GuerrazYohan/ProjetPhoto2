@@ -15,7 +15,11 @@ namespace AwesomeApp.View
     {
 
         ZXingScannerPage scanPage;
-        public PageScan()
+
+       ZXingBarcodeImageView pageScanner;
+
+
+    public PageScan()
         {
             InitializeComponent();
             ButtonScanDefault.Clicked += ButtonScanDefault_Clicked;
@@ -25,6 +29,7 @@ namespace AwesomeApp.View
             
         }
 
+        
 
         //Permet de Scanner les QR code et les afficher dans une autre page
         private async void ButtonScanCustomPage_Clicked(object sender, EventArgs e)
@@ -50,18 +55,23 @@ namespace AwesomeApp.View
 
         //Permet de Scanner les QR code et les code barre en continue
         private async void ButtonScanContinuously_Clicked(object sender, EventArgs e)
-        {
-            scanPage = new ZXingScannerPage(new ZXing.Mobile.MobileBarcodeScanningOptions { DelayBetweenContinuousScans = 3000 });
+        { 
+
+                scanPage = new ZXingScannerPage(new ZXing.Mobile.MobileBarcodeScanningOptions { DelayBetweenContinuousScans = 3000 });
             scanPage.OnScanResult += (result) =>
                 Device.BeginInvokeOnMainThread(() =>
                    DisplayActionSheet("Scanned Barcode", result.Text, "Cancel", null, "Partager", "Télécharger"));
 
             await Navigation.PushModalAsync(scanPage);
+
+
         }
 
 
-        //Permet de Scanner les QR code et les code barre avec flache
-        private async void ButtonScanCustom_Clicked(object sender, EventArgs e)
+
+
+    //Permet de Scanner les QR code et les code barre avec flache
+    private async void ButtonScanCustom_Clicked(object sender, EventArgs e)
         {
             // Create our custom overlay
             var customOverlay = new StackLayout
@@ -97,7 +107,9 @@ namespace AwesomeApp.View
         //Permet de Scanner les QR code et les code barre
         private async void ButtonScanDefault_Clicked(object sender, EventArgs e)
         {
+
             scanPage = new ZXingScannerPage();
+           
             scanPage.OnScanResult += (result) => {
                 scanPage.IsScanning = false;
 
