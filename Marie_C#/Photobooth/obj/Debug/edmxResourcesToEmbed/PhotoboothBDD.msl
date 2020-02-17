@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="photoboothproject_2020ModelStoreContainer" CdmEntityContainer="photoboothproject_2020Entities">
+    <EntitySetMapping Name="compte">
+      <EntityTypeMapping TypeName="photoboothproject_2020Model.compte">
+        <MappingFragment StoreEntitySet="compte">
+          <ScalarProperty Name="idCompte" ColumnName="idCompte" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="MotDePasse" ColumnName="MotDePasse" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="compte_has_photo">
+      <EntityTypeMapping TypeName="photoboothproject_2020Model.compte_has_photo">
+        <MappingFragment StoreEntitySet="compte_has_photo">
+          <ScalarProperty Name="Photo_idPhoto" ColumnName="Photo_idPhoto" />
+          <ScalarProperty Name="Evenements_idEvenements" ColumnName="Evenements_idEvenements" />
+          <ScalarProperty Name="Compte_idCompte" ColumnName="Compte_idCompte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="evenements">
+      <EntityTypeMapping TypeName="photoboothproject_2020Model.evenements">
+        <MappingFragment StoreEntitySet="evenements">
+          <ScalarProperty Name="idEvenements" ColumnName="idEvenements" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="DateDebut" ColumnName="DateDebut" />
+          <ScalarProperty Name="DateDeFin" ColumnName="DateDeFin" />
+          <ScalarProperty Name="MotDePasseEvent" ColumnName="MotDePasseEvent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="evenements_attente">
+      <EntityTypeMapping TypeName="photoboothproject_2020Model.evenements_attente">
+        <MappingFragment StoreEntitySet="evenements_attente">
+          <ScalarProperty Name="idEvenements_Attente" ColumnName="idEvenements_Attente" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="DateDebut" ColumnName="DateDebut" />
+          <ScalarProperty Name="DateDeFin" ColumnName="DateDeFin" />
+          <ScalarProperty Name="MotDePasseEvent" ColumnName="MotDePasseEvent" />
+          <ScalarProperty Name="IdCompte" ColumnName="IdCompte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="photo">
+      <EntityTypeMapping TypeName="photoboothproject_2020Model.photo">
+        <MappingFragment StoreEntitySet="photo">
+          <ScalarProperty Name="idPhoto" ColumnName="idPhoto" />
+          <ScalarProperty Name="CheminDacces" ColumnName="CheminDacces" />
+          <ScalarProperty Name="RawBytesQR" ColumnName="RawBytesQR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -48,6 +48,8 @@ namespace Photobooth
             //Window_Container.Children.Add(my_Home);
             btn_Login.Visibility = Visibility.Hidden;
             btn_Start.Visibility = Visibility.Hidden;
+            UC_Photo my_Photo = new UC_Photo();
+            Window_Container.Children.Add(my_Photo);
         }
         
     }
