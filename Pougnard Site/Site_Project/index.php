@@ -45,13 +45,10 @@
       <img src="View/img/img.jpg">
     </div>
     <div class="carousel-item" href="#three!">
-      <img src="View/img/img3.jpg">
+      <img src="View/img/Image_carousel.png">
     </div>
     <div class="carousel-item" href="#four!">
       <img src="View/img/img4.jpg">
-    </div>
-    <div class="carousel-item" href="#five!">
-      <img src="View/img/img5.jpg">
     </div>
   </div>
 
