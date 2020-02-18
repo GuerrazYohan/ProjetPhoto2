@@ -8,17 +8,23 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="../css/materialize.min.css">
   <link rel="stylesheet" href="../css/style.css">
-  <title>Document</title>
+  <title>Dashboard</title>
 </head>
 
 <body id="Body3">
   <nav>
     <div class="nav-wrapper deep-purple darken-1">
       <a href="#" class="brand-logo center">Bienvenue</a>
+
+
+
       <!-- Dropdown Trigger -->
       <ul class="left hide-on-med-and-down">
       <li><a class='dropdown-trigger btn deep-purple darken-3' href='#' data-target='dropdown1'><i class="material-icons left">grade</i>Mes évenements</a></li>
     </ul>
+
+
+
       <!-- Dropdown Structure -->
       <ul id='dropdown1' class='dropdown-content'>
         <li><a href="#!" class="deep-purple-text">Mariage Thibault</a></li>
@@ -31,11 +37,15 @@
         <li class="divider" tabindex="-1"></li>
         <li><a href="Form-event.php" class="deep-purple-text"><i class="material-icons right">add</i>Ajouter un évenements</a></li>
       </ul>
+      <div class="right" id="btn_home_dash">
+        <a class="btn-floating btn-large waves-effect waves-light purple btn_home" href="../../index.php"><i class="fas fa-home"></i></a>
+      </div>
     </div>
   </nav>
-  <div class="right" id="btn_home_dash">
-    <a class="btn-floating btn-large waves-effect waves-light purple btn_home" href="../../index.php"><i class="fas fa-home"></i></a>
-  </div>
+
+
+
+
   <div class="container center" id="bg_dash">
 
     <div class="row">
@@ -77,11 +87,14 @@
       </div>
     </div>
   </div>
+
+
+
   <script src="https://kit.fontawesome.com/f97f9ece59.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="../../Controler/js/materialize.min.js"></script>
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       $('.dropdown-trigger').dropdown();
       $('.materialbox').materialbox();
     });
