@@ -24,7 +24,7 @@
       </ul>
       <ul class="right hide-on-med-and-down">
         <li><a class="waves-effect waves-dark deep-purple darken-3 btn" href="View/Pages/Signin.php">S'inscrire</a></li>
-        <li><a class="waves-effect waves-dark deep-purple darken-3 btn" href="View/Pages/Login.html">Se connecter</a></li>
+        <li><a class="waves-effect waves-dark deep-purple darken-3 btn" href="View/Pages/Login.php">Se connecter</a></li>
       </ul>
     </div>
   </nav>
