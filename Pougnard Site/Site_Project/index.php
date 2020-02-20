@@ -24,7 +24,7 @@
       </ul>
       <ul class="right hide-on-med-and-down">
         <li><a class="waves-effect waves-dark deep-purple darken-3 btn" href="View/Pages/Signin.php">S'inscrire</a></li>
-        <li><a class="waves-effect waves-dark deep-purple darken-3 btn" href="View/Pages/Login.html">Se connecter</a></li>
+        <li><a class="waves-effect waves-dark deep-purple darken-3 btn" href="View/Pages/Login.php">Se connecter</a></li>
       </ul>
     </div>
   </nav>
@@ -45,13 +45,10 @@
       <img src="View/img/img.jpg">
     </div>
     <div class="carousel-item" href="#three!">
-      <img src="View/img/img3.jpg">
+      <img src="View/img/Image_carousel.png">
     </div>
     <div class="carousel-item" href="#four!">
       <img src="View/img/img4.jpg">
-    </div>
-    <div class="carousel-item" href="#five!">
-      <img src="View/img/img5.jpg">
     </div>
   </div>
 

@@ -1,3 +1,17 @@
+body {
+  font-family: "HelveticaNeue-UltraLight", "Helvetica Neue UltraLight",
+    "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  color: #ececec;
+  background: #ebebeb;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .btn_card{
   margin-bottom: 3%;
 }
@@ -48,7 +62,6 @@
 }
 #btn_home_dash{
   margin-right: 1%;
-  margin-top: 1%;
 }
 #Body1
 {
@@ -77,19 +90,21 @@
   background: rgba(110, 58, 148, .4);
 }
 
+
+
 /*Style pour la scrollbar du dashboard*/
 
 #bg_dash::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	border-radius: 10px;
-	background-color: #F5F5F5;
+	background-color: #01274d;
 }
 
 #bg_dash::-webkit-scrollbar
 {
 	width: 12px;
-	background-color: #F5F5F5;
+	background-color: #01274d;
 }
 
 #bg_dash::-webkit-scrollbar-thumb
@@ -98,10 +113,17 @@
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #663396;
 }
+
+
+
+
 /*Style du drop down du dashboard*/
 .dropdown-content li > a, .dropdown-content li > span {
     color: #7500fb !important;
 }
+
+
+
 /*Style des datepicker dans le form de la demande d'événements
 
 Overlay Principal*/
