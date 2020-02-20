@@ -25,12 +25,18 @@
             </Button>
         </Grid>
 
+        <ListBox x:Name="CameraListBox" Height="25" Width="150"/>
+        
+        <Button x:Name="RefreshButton" Content="↻" Width="50" Margin="471,0,271,0"/>
+
         <Button Name="btn_Start" Foreground="White" Padding="0" BorderBrush="{x:Null}" Click="Btn_Start_Click" Margin="630,0,0,0" Visibility="Hidden">
             <Button.Background>
                 <ImageBrush ImageSource="view/img/start.png" Stretch="Uniform" AlignmentX="Right"/>
             </Button.Background> Démarer
         </Button>
 
+        
+        
         <!-- #################################### Container ########################### -->
         <Grid Grid.Row="1" Name="Window_Container">
 

@@ -8,5 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Canvas x:Name="LVCanvas" Background="White"/>
+        <Label x:Name="lb_Timer" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#7F000000" Background="{x:Null}" FontSize="48"/>
+        
     </Grid>
 </UserControl>
