@@ -11,6 +11,16 @@
     <ContentPage.Resources>
         <ResourceDictionary>
 
+            <Style x:Key="LargeButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#aa007f"/>
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderRadius" Value="20"/>
+                <Setter Property="FontSize" Value="Title" />
+                <Setter Property="Padding" Value="15" />
+                <Setter Property="Margin" Value="3"/>
+            </Style>
+
 
             <Style x:Key="StyleImage1" TargetType="Image">
                 <Setter Property="HeightRequest" Value="120" />
@@ -58,33 +68,35 @@
 
             <StackLayout Grid.Row="2">
 
-                    <Label Text="Bientôt disponible!"
+                    <!--<Label Text="Bientôt disponible!"
                    TextColor="White" FontSize="Title"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" />-->
 
-                    <Button x:Name="ButtonScanDefault" Text="Scan Default"></Button>
-                    <Button x:Name="ButtonScanCustom" Text="Scan Custom"></Button>
-                    <Button x:Name="ButtonScanContinuously" Text="Scan Continously"></Button>
-                    <Button x:Name="ButtonScanCustomPage" Text="Scan CustomPage"></Button>
+
+                    <Button x:Name="ButtonScanDefault" Text="Scan Default" Style="{StaticResource LargeButton}"></Button>
+                    <Button x:Name="ButtonScanCustom" Text="Scan Custom"  Style="{StaticResource LargeButton}"></Button>
+                    <Button x:Name="ButtonScanContinuously" Text="Scanner le QR code" Style="{StaticResource LargeButton}"></Button>
+                    <Button x:Name="ButtonScanCustomPage" Text="Scan CustomPage"  Style="{StaticResource LargeButton}"></Button>
+
 
                     <BoxView x:Name="VoirPhoto"></BoxView>
                 
             </StackLayout>
 
-                <!--<StackLayout Grid.Row="3">
-
-                </StackLayout>-->
-
-
-                <StackLayout Grid.Row="4">
-
+                <StackLayout Grid.Row="3">
                     <ImageButton Source="@drawable/Home.ico"
                     VerticalOptions="CenterAndExpand"
                     Style="{StaticResource StyleImage2}" FlexLayout.AlignSelf="Center"
                     Clicked="GoPageHome_Clicked" />
-
                 </StackLayout>
+
+
+                <!--<StackLayout Grid.Row="4">
+
+                    
+
+                </StackLayout>-->
 
             </Grid>
         </ScrollView>
