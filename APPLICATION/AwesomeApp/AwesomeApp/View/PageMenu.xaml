@@ -12,7 +12,8 @@
     <!--Balise Style pour le design-->
     <ContentPage.Resources>
         <ResourceDictionary>
-            
+
+            <!--Style pour les buton forme, couleur, etc-->
             <Style x:Key="LargeButton" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="#aa007f"/>
                 <Setter Property="HeightRequest" Value="100" />
@@ -23,6 +24,7 @@
                 <Setter Property="Margin" Value="3"/>
             </Style>
 
+            <!--Style pour le text dans les butons-->
             <Style x:Key="TextMenu" TargetType="Label">
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontSize" Value="60"/>

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AwesomeApp.View;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZXing.Net.Mobile.Forms;
+
 
 namespace AwesomeApp.View
 {
@@ -16,41 +18,17 @@ namespace AwesomeApp.View
 
         ZXingScannerPage scanPage;
 
-       ZXingBarcodeImageView pageScanner;
+        string value;
 
 
     public PageScan()
         {
             InitializeComponent();
-            ButtonScanDefault.Clicked += ButtonScanDefault_Clicked;
-            ButtonScanCustom.Clicked += ButtonScanCustom_Clicked;
+            
             ButtonScanContinuously.Clicked += ButtonScanContinuously_Clicked;
-            ButtonScanCustomPage.Clicked += ButtonScanCustomPage_Clicked;
+           
             
         }
-
-        
-
-        //Permet de Scanner les QR code et les afficher dans une autre page
-        private async void ButtonScanCustomPage_Clicked(object sender, EventArgs e)
-        {
-            var customScanPage = new PageScan2();
-            scanPage = new ZXingScannerPage();
-            scanPage.OnScanResult += (result) => {
-                scanPage.IsScanning = false;
-
-                //Do something with result
-                Device.BeginInvokeOnMainThread(() => {
-                    Navigation.PopModalAsync();
-                    DisplayAlert("Scanned Barcode", result.Text, "OK");
-                });
-            };
-
-            await Navigation.PushModalAsync(scanPage);
-        }
-
-
-
 
 
         //Permet de Scanner les QR code et les code barre en continue
@@ -60,72 +38,56 @@ namespace AwesomeApp.View
                 scanPage = new ZXingScannerPage(new ZXing.Mobile.MobileBarcodeScanningOptions { DelayBetweenContinuousScans = 3000 });
             scanPage.OnScanResult += (result) =>
                 Device.BeginInvokeOnMainThread(() =>
-                   DisplayActionSheet("Scanned Barcode", result.Text, "Cancel", null, "Partager", "Télécharger"));
-
+             DisplayActionSheet("Résultat du scan", result.Text, "Cancel", null, "Partager","Télécharger"));
+            
             await Navigation.PushModalAsync(scanPage);
 
 
         }
-
-
-
-
-    //Permet de Scanner les QR code et les code barre avec flache
-    private async void ButtonScanCustom_Clicked(object sender, EventArgs e)
+        public void VolunteerView()
         {
-            // Create our custom overlay
-            var customOverlay = new StackLayout
-            {
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                VerticalOptions = LayoutOptions.FillAndExpand
-            };
-            var torch = new Button
-            {
-                Text = "Toggle Torch"
-            };
-            torch.Clicked += delegate {
-                scanPage.ToggleTorch();
-            };
-            customOverlay.Children.Add(torch);
-
-            scanPage = new ZXingScannerPage(new ZXing.Mobile.MobileBarcodeScanningOptions { AutoRotate = true }, customOverlay: customOverlay);
-            scanPage.OnScanResult += (result) => {
-                scanPage.IsScanning = false;
-
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    Navigation.PopModalAsync();
-                    DisplayAlert("Scanned Barcode", result.Text, "OK");
-                });
-            };
-            await Navigation.PushModalAsync(scanPage);
-        }
-
-
-
-
-        //Permet de Scanner les QR code et les code barre
-        private async void ButtonScanDefault_Clicked(object sender, EventArgs e)
-        {
-
-            scanPage = new ZXingScannerPage();
            
-            scanPage.OnScanResult += (result) => {
-                scanPage.IsScanning = false;
-
-                //Do something with result
-                Device.BeginInvokeOnMainThread(() => {
-                    Navigation.PopModalAsync();
-                    DisplayAlert("Scanned Barcode", result.Text, "OK");
-                });
+            backgroundImage.Source = new UriImageSource
+            {
+                Uri = new Uri(value),
+                CachingEnabled = true,
+                CacheValidity = new TimeSpan(5, 0, 0, 0)
             };
+        }
 
-            await Navigation.PushModalAsync(scanPage);
+        //Fonction pour partager 
+        public async Task ShareText(string text)
+        {
+            await Share.RequestAsync(new ShareTextRequest
+            {
+                Text = text,
+                Title = "Share Text"
+            });
+        }
+
+        public async Task ShareUri(string uri)
+        {
+            await Share.RequestAsync(new ShareTextRequest
+            {
+                Uri = uri,
+                Title = "Share Web Link"
+            });
+        }
+
+        public async Task ShareImg(string img)
+        {
+            await Share.RequestAsync(new ShareTextRequest
+            {
+                Uri = img,
+                Title = "Share Web Link"
+            });
         }
 
 
 
 
+
+        //Naviguer jusqu'à la page home
         private void GoPageHome_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new PageMenu());

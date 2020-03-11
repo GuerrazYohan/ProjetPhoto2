@@ -274,6 +274,17 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "Plugin.Share/7.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        }
+      },
       "Rg.Plugins.Popup/1.2.0.223": {
         "type": "package",
         "dependencies": {
@@ -1236,9 +1247,10 @@
           "Microsoft.AspNet.WebApi.Client": "5.2.7",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.9",
           "Newtonsoft.Json": "12.0.3",
+          "Plugin.Share": "7.1.1",
           "Rg.Plugins.Popup": "1.2.0.223",
           "System.Net.Http": "4.3.4",
-          "Xamarin.Forms": "4.4.0.991640",
+          "Xamarin.Forms": "4.5.0.356",
           "ZXing.Net.Mobile.Forms": "2.4.1",
           "sqlite-net-pcl": "1.6.292"
         },
@@ -1534,6 +1546,17 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "Plugin.Share/7.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
         }
       },
       "Rg.Plugins.Popup/1.2.0.223": {
@@ -2815,9 +2838,10 @@
           "Microsoft.AspNet.WebApi.Client": "5.2.7",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.9",
           "Newtonsoft.Json": "12.0.3",
+          "Plugin.Share": "7.1.1",
           "Rg.Plugins.Popup": "1.2.0.223",
           "System.Net.Http": "4.3.4",
-          "Xamarin.Forms": "4.4.0.991640",
+          "Xamarin.Forms": "4.5.0.356",
           "ZXing.Net.Mobile.Forms": "2.4.1",
           "sqlite-net-pcl": "1.6.292"
         },
@@ -3113,6 +3137,17 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "Plugin.Share/7.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
         }
       },
       "Rg.Plugins.Popup/1.2.0.223": {
@@ -4493,9 +4528,10 @@
           "Microsoft.AspNet.WebApi.Client": "5.2.7",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.9",
           "Newtonsoft.Json": "12.0.3",
+          "Plugin.Share": "7.1.1",
           "Rg.Plugins.Popup": "1.2.0.223",
           "System.Net.Http": "4.3.4",
-          "Xamarin.Forms": "4.4.0.991640",
+          "Xamarin.Forms": "4.5.0.356",
           "ZXing.Net.Mobile.Forms": "2.4.1",
           "sqlite-net-pcl": "1.6.292"
         },
@@ -4791,6 +4827,17 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "Plugin.Share/7.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
         }
       },
       "Rg.Plugins.Popup/1.2.0.223": {
@@ -6165,9 +6212,10 @@
           "Microsoft.AspNet.WebApi.Client": "5.2.7",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.9",
           "Newtonsoft.Json": "12.0.3",
+          "Plugin.Share": "7.1.1",
           "Rg.Plugins.Popup": "1.2.0.223",
           "System.Net.Http": "4.3.4",
-          "Xamarin.Forms": "4.4.0.991640",
+          "Xamarin.Forms": "4.5.0.356",
           "ZXing.Net.Mobile.Forms": "2.4.1",
           "sqlite-net-pcl": "1.6.292"
         },
@@ -6463,6 +6511,17 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "Plugin.Share/7.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
         }
       },
       "Rg.Plugins.Popup/1.2.0.223": {
@@ -7744,9 +7803,10 @@
           "Microsoft.AspNet.WebApi.Client": "5.2.7",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.9",
           "Newtonsoft.Json": "12.0.3",
+          "Plugin.Share": "7.1.1",
           "Rg.Plugins.Popup": "1.2.0.223",
           "System.Net.Http": "4.3.4",
-          "Xamarin.Forms": "4.4.0.991640",
+          "Xamarin.Forms": "4.5.0.356",
           "ZXing.Net.Mobile.Forms": "2.4.1",
           "sqlite-net-pcl": "1.6.292"
         },
@@ -8042,6 +8102,17 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "Plugin.Share/7.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
         }
       },
       "Rg.Plugins.Popup/1.2.0.223": {
@@ -9422,9 +9493,10 @@
           "Microsoft.AspNet.WebApi.Client": "5.2.7",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.9",
           "Newtonsoft.Json": "12.0.3",
+          "Plugin.Share": "7.1.1",
           "Rg.Plugins.Popup": "1.2.0.223",
           "System.Net.Http": "4.3.4",
-          "Xamarin.Forms": "4.4.0.991640",
+          "Xamarin.Forms": "4.5.0.356",
           "ZXing.Net.Mobile.Forms": "2.4.1",
           "sqlite-net-pcl": "1.6.292"
         },
@@ -9720,6 +9792,17 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "Plugin.Share/7.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
         }
       },
       "Rg.Plugins.Popup/1.2.0.223": {
@@ -11001,9 +11084,10 @@
           "Microsoft.AspNet.WebApi.Client": "5.2.7",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.9",
           "Newtonsoft.Json": "12.0.3",
+          "Plugin.Share": "7.1.1",
           "Rg.Plugins.Popup": "1.2.0.223",
           "System.Net.Http": "4.3.4",
-          "Xamarin.Forms": "4.4.0.991640",
+          "Xamarin.Forms": "4.5.0.356",
           "ZXing.Net.Mobile.Forms": "2.4.1",
           "sqlite-net-pcl": "1.6.292"
         },
@@ -11299,6 +11383,17 @@
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
+        }
+      },
+      "Plugin.Share/7.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Share.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Share.dll": {}
         }
       },
       "Rg.Plugins.Popup/1.2.0.223": {
@@ -12679,9 +12774,10 @@
           "Microsoft.AspNet.WebApi.Client": "5.2.7",
           "Microsoft.NETCore.UniversalWindowsPlatform": "6.2.9",
           "Newtonsoft.Json": "12.0.3",
+          "Plugin.Share": "7.1.1",
           "Rg.Plugins.Popup": "1.2.0.223",
           "System.Net.Http": "4.3.4",
-          "Xamarin.Forms": "4.4.0.991640",
+          "Xamarin.Forms": "4.5.0.356",
           "ZXing.Net.Mobile.Forms": "2.4.1",
           "sqlite-net-pcl": "1.6.292"
         },
@@ -13348,6 +13444,42 @@
         "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.1.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "Plugin.Share/7.1.1": {
+      "sha512": "07mFq3H9eeX2TGNKitmByjDKZl/3KXZrT2jv/27mEEnY7me/lHQSX52mI0B1mVTZquCloNmZm12EcV1t4fFSSA==",
+      "type": "package",
+      "path": "plugin.share/7.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/MonoAndroid10/Plugin.Share.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Share.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Share.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.Share.dll",
+        "lib/MonoAndroid10/Plugin.Share.pdb",
+        "lib/MonoAndroid10/Plugin.Share.xml",
+        "lib/UAP10/Plugin.Share.Abstractions.dll",
+        "lib/UAP10/Plugin.Share.Abstractions.pdb",
+        "lib/UAP10/Plugin.Share.Abstractions.xml",
+        "lib/UAP10/Plugin.Share.XML",
+        "lib/UAP10/Plugin.Share.dll",
+        "lib/UAP10/Plugin.Share.pdb",
+        "lib/UAP10/Plugin.Share.pri",
+        "lib/Xamarin.iOS10/Plugin.Share.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Share.Abstractions.pdb",
+        "lib/Xamarin.iOS10/Plugin.Share.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.Share.dll",
+        "lib/Xamarin.iOS10/Plugin.Share.xml",
+        "lib/netstandard1.0/Plugin.Share.Abstractions.dll",
+        "lib/netstandard1.0/Plugin.Share.Abstractions.pdb",
+        "lib/netstandard1.0/Plugin.Share.Abstractions.xml",
+        "lib/netstandard1.0/Plugin.Share.deps.json",
+        "lib/netstandard1.0/Plugin.Share.dll",
+        "lib/netstandard1.0/Plugin.Share.pdb",
+        "lib/netstandard1.0/Plugin.Share.xml",
+        "plugin.share.7.1.1.nupkg.sha512",
+        "plugin.share.nuspec"
       ]
     },
     "Rg.Plugins.Popup/1.2.0.223": {
@@ -20920,5 +21052,24 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Passage à une version antérieure du package détecté : Xamarin.Forms de 4.5.0.356 à 4.4.0.991640. Référencez le package directement à partir du projet pour sélectionner une version différente. \r\n AwesomeApp.UWP -> AwesomeApp -> Xamarin.Forms (>= 4.5.0.356) \r\n AwesomeApp.UWP -> Xamarin.Forms (>= 4.4.0.991640)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "UAP,Version=v10.0.16299",
+        "UAP,Version=v10.0.16299/win10-arm",
+        "UAP,Version=v10.0.16299/win10-arm-aot",
+        "UAP,Version=v10.0.16299/win10-arm64-aot",
+        "UAP,Version=v10.0.16299/win10-x64",
+        "UAP,Version=v10.0.16299/win10-x64-aot",
+        "UAP,Version=v10.0.16299/win10-x86",
+        "UAP,Version=v10.0.16299/win10-x86-aot"
+      ]
+    }
+  ]
 }
