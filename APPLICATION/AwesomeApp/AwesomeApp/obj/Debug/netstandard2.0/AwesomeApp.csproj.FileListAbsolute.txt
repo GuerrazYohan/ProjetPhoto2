@@ -27,9 +27,6 @@ C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\AwesomeApp\AwesomeApp\obj\Debug\nets
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\AwesomeApp.deps.json
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\AwesomeApp.dll
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\AwesomeApp.pdb
-C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\Xamarin.Essentials.dll
-C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\Xamarin.Essentials.pdb
-C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\Xamarin.Essentials.xml
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\View\PageEvent.xaml.g.cs
@@ -40,6 +37,10 @@ C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\ob
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.AssemblyInfoInputs.cache
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.AssemblyInfo.cs
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\XamlC.stamp
-C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.csproj.CopyComplete
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.dll
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.pdb
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.csprojAssemblyReference.cache
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\Xamarin.Essentials.dll
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\Xamarin.Essentials.pdb
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\Xamarin.Essentials.xml
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.csproj.CopyComplete

@@ -9,7 +9,6 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZXing.Net.Mobile.Forms;
 
-
 namespace AwesomeApp.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -18,7 +17,7 @@ namespace AwesomeApp.View
 
         ZXingScannerPage scanPage;
 
-        string value;
+       ZXingBarcodeImageView pageScanner;
 
 
     public PageScan()
@@ -26,43 +25,71 @@ namespace AwesomeApp.View
             InitializeComponent();
             
             ButtonScanContinuously.Clicked += ButtonScanContinuously_Clicked;
-           
+            
             
         }
+
+        
+
+     
+
+
+
 
 
         //Permet de Scanner les QR code et les code barre en continue
         private async void ButtonScanContinuously_Clicked(object sender, EventArgs e)
         { 
 
-                scanPage = new ZXingScannerPage(new ZXing.Mobile.MobileBarcodeScanningOptions { DelayBetweenContinuousScans = 3000 });
-            scanPage.OnScanResult += (result) =>
-                Device.BeginInvokeOnMainThread(() =>
-             DisplayActionSheet("Résultat du scan", result.Text, "Cancel", null, "Partager","Télécharger"));
-            
+            //    scanPage = new ZXingScannerPage(new ZXing.Mobile.MobileBarcodeScanningOptions { DelayBetweenContinuousScans = 3000 });
+            //scanPage.OnScanResult += (result) =>
+            //    Device.BeginInvokeOnMainThread(() =>
+            //       DisplayActionSheet("Scanned Barcode", result.Text, "Cancel", null, "Partager", "Télécharger"));
+
+            //await Navigation.PushModalAsync(scanPage);
+
+
+
+            scanPage = new ZXingScannerPage();
+
+            scanPage.OnScanResult += (result) => {
+                scanPage.IsScanning = false;
+
+                //Do something with result
+                Device.BeginInvokeOnMainThread(async () => {
+                    Navigation.PopModalAsync();
+
+
+                   var Action = await DisplayActionSheet("Scanned Barcode", result.Text, "Cancel", null, "Partager", "Télécharger");
+
+                    switch (Action)
+                    {
+                        case "Cancel":
+
+                            // Do Something when 'Cancel' Button is pressed
+
+                            break;
+
+                        case "Partager":
+
+                           await ShareUri(result.Text);
+
+                            break;
+                        case "Télécharger":
+
+                            // Do Something when 'Button1' Button is pressed
+
+                            break;
+
+                    }
+
+
+                });
+            };
+
             await Navigation.PushModalAsync(scanPage);
 
 
-        }
-        public void VolunteerView()
-        {
-           
-            backgroundImage.Source = new UriImageSource
-            {
-                Uri = new Uri(value),
-                CachingEnabled = true,
-                CacheValidity = new TimeSpan(5, 0, 0, 0)
-            };
-        }
-
-        //Fonction pour partager 
-        public async Task ShareText(string text)
-        {
-            await Share.RequestAsync(new ShareTextRequest
-            {
-                Text = text,
-                Title = "Share Text"
-            });
         }
 
         public async Task ShareUri(string uri)
@@ -74,20 +101,19 @@ namespace AwesomeApp.View
             });
         }
 
-        public async Task ShareImg(string img)
-        {
-            await Share.RequestAsync(new ShareTextRequest
-            {
-                Uri = img,
-                Title = "Share Web Link"
-            });
-        }
 
 
 
 
 
-        //Naviguer jusqu'à la page home
+
+
+
+
+
+
+
+
         private void GoPageHome_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new PageMenu());

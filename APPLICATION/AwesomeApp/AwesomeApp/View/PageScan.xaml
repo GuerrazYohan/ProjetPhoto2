@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:zxing="clr-namespace:ZXing.Net.Mobile.Forms;assembly=ZXing.Net.Mobile.Forms"
              mc:Ignorable="d"
              BackgroundColor="#613B6D"
              NavigationPage.HasNavigationBar="False"
@@ -11,7 +10,9 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <!--Style pour les buton forme, couleur, etc-->
+
+
+
             <Style x:Key="LargeButton" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="#aa007f"/>
                 <Setter Property="HeightRequest" Value="100" />
@@ -22,20 +23,17 @@
                 <Setter Property="Margin" Value="3"/>
             </Style>
 
-            <!--Style pour les images-->
             <Style x:Key="StyleImage1" TargetType="Image">
                 <Setter Property="HeightRequest" Value="120" />
                 <Setter Property="WidthRequest" Value="120" />
             </Style>
 
-            <!--Style pour les textes-->
             <Style x:Key="StyleLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontSize" Value="Title" />
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
-            
-            <!--Style pour les images-->
+
             <Style x:Key="StyleImage2" TargetType="ImageButton">
                 <Setter Property="HeightRequest" Value="50" />
                 <Setter Property="WidthRequest" Value="50" />
@@ -47,7 +45,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <!--Contenue de la page-->
+
     <ContentPage.Content>
   
         <ScrollView>
@@ -63,41 +61,36 @@
 
                 </StackLayout>
 
-                <!--Text de haut de page-->
                 <StackLayout Grid.Row="1">
-                    
                     <Image Source="@drawable/PhotosScan" Style="{StaticResource StyleImage1}" ></Image>
                     <Label Text="Scanner QR code" Style="{StaticResource StyleLabel}" />
 
                 </StackLayout>
 
-                <StackLayout Grid.Row="2">
+            <StackLayout Grid.Row="2">
 
-                    <!--Bouton du scan-->
-                    <Button x:Name="ButtonScanContinuously" Text="Scanner le QR code" Style="{StaticResource LargeButton}"></Button>
 
-                    <Image x:Name="backgroundImage" AbsoluteLayout.LayoutBounds="0,0,1,1"   AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"/>
 
-                    <!--<BoxView Grid.Row="0" BackgroundColor="Chocolate"/>
-                    --><!--<zxing:ZXingScannerView Grid.Row="1" x:Name="_scanView"  IsScanning="true"
-                                WidthRequest="200" HeightRequest="200" />--><!--
-                    <BoxView Grid.Row="2" BackgroundColor="Blue" />-->
+                    <Button x:Name="ButtonScanContinuously" Text="Scanner le QR code" Style="{StaticResource LargeButton}" ></Button>
+                    
 
-                </StackLayout>
+                    <BoxView x:Name="VoirPhoto"></BoxView>
+                
+            </StackLayout>
 
-                <StackLayout Grid.Row="3">
+                <!--<StackLayout Grid.Row="3">
+
+                </StackLayout>-->
+
+
+                <StackLayout Grid.Row="4">
+
                     <ImageButton Source="@drawable/Home.ico"
                     VerticalOptions="CenterAndExpand"
                     Style="{StaticResource StyleImage2}" FlexLayout.AlignSelf="Center"
                     Clicked="GoPageHome_Clicked" />
+
                 </StackLayout>
-
-
-                <!--<StackLayout Grid.Row="4">
-
-                    
-
-                </StackLayout>-->
 
             </Grid>
         </ScrollView>
