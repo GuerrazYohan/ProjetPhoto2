@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Android.App;
 using AwesomeApp.View;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -23,7 +24,9 @@ namespace AwesomeApp.View
     public PageScan()
         {
             InitializeComponent();
-            
+
+           
+
             ButtonScanContinuously.Clicked += ButtonScanContinuously_Clicked;
             
             
@@ -92,6 +95,7 @@ namespace AwesomeApp.View
 
         }
 
+        //Fonction pour partager un fichier
         public async Task ShareUri(string uri)
         {
             await Share.RequestAsync(new ShareTextRequest
@@ -105,12 +109,12 @@ namespace AwesomeApp.View
 
 
 
-
-
-
-
-
-
+        //Fonction pour télécharger un fichier
+      
+        public async Task Telechargement(string fichier)
+        {
+            
+        }
 
 
 

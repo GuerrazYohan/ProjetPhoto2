@@ -8,6 +8,8 @@ public class MonoPackageManager_Resources {
 		"FormsViewGroup.dll",
 		"Newtonsoft.Json.Bson.dll",
 		"Newtonsoft.Json.dll",
+		"Plugin.DownloadManager.Abstractions.dll",
+		"Plugin.DownloadManager.dll",
 		"Rg.Plugins.Popup.dll",
 		"Rg.Plugins.Popup.Droid.dll",
 		"SQLite-net.dll",

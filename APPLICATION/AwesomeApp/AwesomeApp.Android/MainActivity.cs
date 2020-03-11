@@ -7,6 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Plugin.DownloadManager;
 
 namespace AwesomeApp.Droid
 {
@@ -30,6 +31,8 @@ namespace AwesomeApp.Droid
         {
             global::ZXing.Net.Mobile.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+       
 
 
 
