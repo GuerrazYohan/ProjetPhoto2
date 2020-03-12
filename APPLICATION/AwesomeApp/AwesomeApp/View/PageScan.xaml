@@ -72,9 +72,9 @@
 
 
                     <Button x:Name="ButtonScanContinuously" Text="Scanner le QR code" Style="{StaticResource LargeButton}" ></Button>
-                    
 
-                    <BoxView x:Name="VoirPhoto"></BoxView>
+
+                    
                 
             </StackLayout>
 

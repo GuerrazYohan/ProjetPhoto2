@@ -1,10 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.IO;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Android.App;
 using AwesomeApp.View;
+using Plugin.DownloadManager;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -21,7 +27,12 @@ namespace AwesomeApp.View
        ZXingBarcodeImageView pageScanner;
 
 
-    public PageScan()
+       
+        
+
+
+
+        public PageScan()
         {
             InitializeComponent();
 
@@ -60,7 +71,7 @@ namespace AwesomeApp.View
 
                 //Do something with result
                 Device.BeginInvokeOnMainThread(async () => {
-                    Navigation.PopModalAsync();
+                     Navigation.PopModalAsync();
 
 
                    var Action = await DisplayActionSheet("Scanned Barcode", result.Text, "Cancel", null, "Partager", "Télécharger");
@@ -80,7 +91,7 @@ namespace AwesomeApp.View
                             break;
                         case "Télécharger":
 
-                            // Do Something when 'Button1' Button is pressed
+                           await Telechargement(result.Text);
 
                             break;
 
@@ -113,8 +124,17 @@ namespace AwesomeApp.View
       
         public async Task Telechargement(string fichier)
         {
+            string somestring;
             
+            
+                WebClient wc = new WebClient();
+                somestring = wc.DownloadString(fichier);
+            
+           
+
         }
+
+        
 
 
 
