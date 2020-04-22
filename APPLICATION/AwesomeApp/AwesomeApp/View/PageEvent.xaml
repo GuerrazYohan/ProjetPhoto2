@@ -119,7 +119,7 @@
                     </Label>-->
 
 
-                    <Editor Placeholder="Laisser nous un commentaire svp " Style="{StaticResource StyleBox}"  />
+                    <Editor x:Name="zoneComment" Placeholder="Laisser nous un commentaire svp " Style="{StaticResource StyleBox}"  />
 
 
                 </StackLayout>

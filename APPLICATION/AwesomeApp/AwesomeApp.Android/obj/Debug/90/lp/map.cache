@@ -1,7 +1,8 @@
+AwesomeApp
 FastAndroidCamera
 FormsViewGroup
 Plugin.DownloadManager
-Rg.Plugins.Popup.Droid
+Rg.Plugins.Popup
 SQLitePCLRaw.batteries_green
 SQLitePCLRaw.batteries_v2
 SQLitePCLRaw.core
@@ -50,4 +51,3 @@ Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 ZXing.Net.Mobile.Forms.Android
 ZXingNetMobile
-AwesomeApp

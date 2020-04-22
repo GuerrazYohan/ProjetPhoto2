@@ -54,6 +54,7 @@
                     <RowDefinition Height="20"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
@@ -78,9 +79,16 @@
                 
             </StackLayout>
 
-                <!--<StackLayout Grid.Row="3">
+                <StackLayout Grid.Row="3">
 
-                </StackLayout>-->
+
+                    <ContentView>
+
+                        <Image Source="{Binding ScanImage}"></Image>
+                        
+                    </ContentView>
+                    
+                </StackLayout>
 
 
                 <StackLayout Grid.Row="4">

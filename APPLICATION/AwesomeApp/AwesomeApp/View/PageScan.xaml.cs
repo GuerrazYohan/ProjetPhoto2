@@ -15,54 +15,50 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ZXing.Net.Mobile.Forms;
+using AwesomeApp.Model;
 
 namespace AwesomeApp.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PageScan : ContentPage
     {
-
+     
+        
         ZXingScannerPage scanPage;
 
        ZXingBarcodeImageView pageScanner;
 
-
+        public string result { get; set; }
        
-        
-
-
-
+  
         public PageScan()
         {
             InitializeComponent();
 
-           
+            
 
             ButtonScanContinuously.Clicked += ButtonScanContinuously_Clicked;
             
             
         }
 
-        
 
-     
+
+
 
 
 
 
 
         //Permet de Scanner les QR code et les code barre en continue
+        //    scanPage = new ZXingScannerPage(new ZXing.Mobile.MobileBarcodeScanningOptions { DelayBetweenContinuousScans = 3000 });
+        //scanPage.OnScanResult += (result) =>
+        //    Device.BeginInvokeOnMainThread(() =>
+        //       DisplayActionSheet("Scanned Barcode", result.Text, "Cancel", null, "Partager", "Télécharger"));
+
+        //await Navigation.PushModalAsync(scanPage);
         private async void ButtonScanContinuously_Clicked(object sender, EventArgs e)
         { 
-
-            //    scanPage = new ZXingScannerPage(new ZXing.Mobile.MobileBarcodeScanningOptions { DelayBetweenContinuousScans = 3000 });
-            //scanPage.OnScanResult += (result) =>
-            //    Device.BeginInvokeOnMainThread(() =>
-            //       DisplayActionSheet("Scanned Barcode", result.Text, "Cancel", null, "Partager", "Télécharger"));
-
-            //await Navigation.PushModalAsync(scanPage);
-
-
 
             scanPage = new ZXingScannerPage();
 
@@ -71,7 +67,7 @@ namespace AwesomeApp.View
 
                 //Do something with result
                 Device.BeginInvokeOnMainThread(async () => {
-                     Navigation.PopModalAsync();
+                    await Navigation.PopModalAsync();
 
 
                    var Action = await DisplayActionSheet("Scanned Barcode", result.Text, "Cancel", null, "Partager", "Télécharger");
@@ -86,12 +82,14 @@ namespace AwesomeApp.View
 
                         case "Partager":
 
-                           await ShareUri(result.Text);
+                           
+
+                         await ShareUri(result.Text);
 
                             break;
                         case "Télécharger":
 
-                           await Telechargement(result.Text);
+                             DownloadFile(result.Text);
 
                             break;
 
@@ -103,8 +101,9 @@ namespace AwesomeApp.View
 
             await Navigation.PushModalAsync(scanPage);
 
-
         }
+
+       
 
         //Fonction pour partager un fichier
         public async Task ShareUri(string uri)
@@ -117,26 +116,15 @@ namespace AwesomeApp.View
         }
 
 
-
-
-
         //Fonction pour télécharger un fichier
-      
-        public async Task Telechargement(string fichier)
+
+        public void DownloadFile(string address)
         {
-            string somestring;
-            
-            
-                WebClient wc = new WebClient();
-                somestring = wc.DownloadString(fichier);
-            
-           
+            WebClient client = new WebClient();
+            string reply = client.DownloadString(address);
 
+            Console.WriteLine(reply);
         }
-
-        
-
-
 
         private void GoPageHome_Clicked(object sender, EventArgs e)
         {
@@ -144,4 +132,11 @@ namespace AwesomeApp.View
         }
 
     }
+
+
+
+    
+
+
+
 }

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             
              mc:Ignorable="d"
               BackgroundColor="#613B6D"
              NavigationPage.HasNavigationBar="False"
@@ -39,18 +40,21 @@
     </ContentPage.Resources>
 
 
-
-
-
     <ContentPage.Content>
         <ScrollView>
         <Grid Margin="16">
             <Grid.RowDefinitions>
                 <RowDefinition Height="13"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="50"/>
-            </Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+
+
+                </Grid.RowDefinitions>
 
 
                 <Grid.ColumnDefinitions>
@@ -68,26 +72,63 @@
                 <Label Text="PROFIL" Style="{StaticResource StyleLabel}"/>
             </StackLayout>
 
-                <StackLayout Grid.Row="2" Grid.ColumnSpan="3">
 
-                <Entry  TextColor="White" PlaceholderColor="White"  MaxLength="30"
-                       Placeholder="Adresse mail"></Entry>
 
-                <Entry TextColor="White" PlaceholderColor="White" MaxLength="30"
-                       Placeholder="Username"></Entry>
+                <!--<StackLayout Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="3">
+                    <Label  Text="email :" Style="{StaticResource StyleLabel}"/>
+                    <Label x:Name="AfficheEmail" Text="{Binding Email}"  Style="{StaticResource StyleLabel}" TextColor="White"/>
 
-                <Entry TextColor="White" PlaceholderColor="White" MaxLength="30"
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="3">
+                    
+                    <Label Text="Nom :" Style="{StaticResource StyleLabel}"/>
+                    <Label x:Name="AfficheNom" 
+                           Style="{StaticResource StyleLabel}"
+                           Text="{Binding Nom, Mode=TwoWay}" TextColor="White"/>
+                    
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="3">
+                
+                    <Label Text="Prenom :" Style="{StaticResource StyleLabel}"/>
+                    <Label x:Name="AffichePrenom" Text="{Binding Prenom}" TextColor="White" Style="{StaticResource StyleLabel}"/>
+              
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Grid.Row="5" Grid.ColumnSpan="3">
+                    <Label Text="Password :" Style="{StaticResource StyleLabel}"/>
+                    <Label x:Name="AffichePassword" Text="{Binding MotDePasse}" TextColor="White" Style="{StaticResource StyleLabel}"/>
+                </StackLayout>-->
+
+
+
+                <StackLayout x:Name="EntryProfil" Grid.Row="6" Grid.ColumnSpan="3">
+                    <Label Text="Modifier" Style="{StaticResource StyleLabel}"/>
+
+                    <Label x:Name="MessageError" Text="" TextColor="Red" FontSize="Medium"></Label>
+                    
+                    <Entry x:Name="emailProfil" TextColor="White" PlaceholderColor="White" MaxLength="30"
+                       Placeholder="email" Text="{Binding Email}"></Entry>
+
+                    <Entry x:Name="NomProfil" TextColor="White" PlaceholderColor="White" MaxLength="30"
+                       Placeholder="Nom" Text="{Binding Nom}" ></Entry>
+
+                    <Entry x:Name="PrenomProfil" TextColor="White" PlaceholderColor="White" MaxLength="30"
+                       Placeholder="Prenom" Text="{Binding Prenom}"></Entry>
+
+                    <Entry x:Name="PassWordProfil" TextColor="White" PlaceholderColor="White" MaxLength="30"
                        Placeholder="Password" 
-                       IsPassword="True"></Entry>
+                       IsPassword="True" Text="{Binding MotDePasse}"></Entry>
+                </StackLayout>
+               
+            <!--<Label x:Name="MessageError" Text="" TextColor="Red" FontSize="Medium"></Label>
+                <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="3">
+                    <Label Text="Email :" Style="{StaticResource StyleLabel}" Grid.ColumnSpan="1" />
+                    <Entry x:Name="emailProfil" TextColor="White" PlaceholderColor="White" MaxLength="30" Placeholder="email" Text="{Binding Email}"></Entry>
+                </StackLayout>-->
 
-                <Entry TextColor="White" PlaceholderColor="White" MaxLength="30"
-                       Placeholder="Confirmer Password" 
-                       IsPassword="True"></Entry>
-
-            </StackLayout>
 
 
-                <StackLayout Grid.Row="4" Grid.Column="0">
+
+                <StackLayout Grid.Row="7" Grid.Column="0">
 
                 <ImageButton Source="@drawable/Checked"
                     VerticalOptions="CenterAndExpand"
@@ -97,7 +138,7 @@
             </StackLayout>
 
 
-                <StackLayout Grid.Row="4" Grid.Column="1">
+                <StackLayout Grid.Row="7" Grid.Column="1">
 
                     <ImageButton Source="@drawable/Home"
                     VerticalOptions="CenterAndExpand"

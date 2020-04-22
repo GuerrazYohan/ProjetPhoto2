@@ -7,6 +7,25 @@
              x:Class="AwesomeApp.MainPage">
 
 
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+
+
+            <Style x:Key="EntrerLogin" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="#aa007f"/>
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="TextColor" Value="White" />
+                
+            </Style>
+
+           
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <!--Contentpage contient tous les composent de la page-->
     <ContentPage.Content>
 
@@ -21,30 +40,37 @@
                 
             </Grid.RowDefinitions>
 
-            <StackLayout Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Row="0" Grid.ColumnSpan="3">
                
             </StackLayout>
 
-            <StackLayout Grid.Row="1">
+                <StackLayout Grid.Row="1" Grid.ColumnSpan="3">
                 <Image Source="@drawable/logo.png"  HeightRequest="150" WidthRequest="150"></Image>
                 <Label Text="Bienvenue sur PhotoBooth" TextColor="White" HorizontalOptions="Center" FontSize="Title"/>
             </StackLayout>
 
-            <StackLayout Grid.Row="2">
+                <StackLayout Grid.Row="2" Grid.ColumnSpan="3">
 
+                    <Label x:Name="MessageError" Text="" TextColor="Red" FontSize="Medium"></Label>
 
-                    <!--TextBox email-->
-                    <Entry TextColor="White" PlaceholderColor="White" HorizontalOptions="Center" MaxLength="30"
-                       Placeholder="Username" />
+                    <!--TextBox email -->
+                    <Entry x:Name="inputemail" TextColor="White" PlaceholderColor="White" MaxLength="30"
+                       Placeholder="email" Text="{Binding Email}"/>
 
-                    <!--TextBox password-->
-                    <Entry TextColor="White" PlaceholderColor="White" Margin="10" HorizontalOptions="Center" MaxLength="30"
+                    <!--TextBox password  -->
+                    <Entry x:Name="inputPassword" TextColor="White" PlaceholderColor="White" Margin="10" MaxLength="30"
                        Placeholder="Password" 
-                       IsPassword="True" />
+                       IsPassword="True" Text="{Binding MotDePasse}" />
                 
             </StackLayout>
 
-            <StackLayout Grid.Row="3">
+                <StackLayout Grid.Row="3" Grid.ColumnSpan="3">
                 <!--<Button x:Name="GoPageOnglet" Grid.Row="2" Text="Login" Clicked="PageOnglet_Clicked" />-->
 
                     <!---->
