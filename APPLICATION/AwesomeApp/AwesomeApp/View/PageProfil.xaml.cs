@@ -32,26 +32,17 @@ namespace AwesomeApp.View
             InitializeComponent();
             model = new PageProfilViewModel();
             this.BindingContext = model;
-           // GetProfil();
+          
 
         }
 
-        private void GetProfil()
-        {
-            //Nom = Application.Current.Properties["nom"].ToString();
-            //Prenom = Application.Current.Properties["prenom"].ToString();
-            //Email = Application.Current.Properties["email"].ToString();
-        }
-
-
+     
         // Bouton pour modifier le compte
         private async void Modifier_Clicked(object sender, EventArgs e)
         {
             UpdatedProfil();
 
         }
-
-      
 
         // Fonction pour modifier le profil
         public async void UpdatedProfil()
@@ -60,7 +51,7 @@ namespace AwesomeApp.View
             JObject oJsonObject = new JObject();
             oJsonObject.Add("Nom", NomProfil.Text);
             oJsonObject.Add("Prenom", PrenomProfil.Text);
-            oJsonObject.Add("MotDePasse", PassWordProfil.Text);
+            oJsonObject.Add("Mdp", PassWordProfil.Text);
             oJsonObject.Add("Email", emailProfil.Text);
 
             //https://forums.xamarin.com/discussion/126833/using-httpclient-postasync-correctly
@@ -68,7 +59,7 @@ namespace AwesomeApp.View
             var content = new StringContent(oJsonObject.ToString(), Encoding.UTF8, "application/json");
 
             HttpClient Profil = new HttpClient();
-            var oTaskPostAsync = await Profil.PostAsync("http://192.168.1.21/WebServiceSlim/Update/CompteWhereEmail", content);
+            var oTaskPostAsync = await Profil.PostAsync("http://109.16.248.248/WebServiceSlim/Update/CompteWhereEmail", content);
 
             oTaskPostAsync.StatusCode.ToString();
 
@@ -85,14 +76,11 @@ namespace AwesomeApp.View
 
         }
 
+        //retour à la page menu
         private void GoMainpage2_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new PageMenu());
         }
-
-
-
-
     }
 
     //Afficher les donnees d'un profil connecter 
@@ -170,11 +158,5 @@ namespace AwesomeApp.View
             }
         }
     }
-
-
-
-
-
-
 
 }

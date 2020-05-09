@@ -13,18 +13,20 @@
     <ContentPage.Resources>
         <ResourceDictionary>
 
-
+            <!--Design les images de l'application-->
             <Style x:Key="StyleImage1" TargetType="Image">
                 <Setter Property="HeightRequest" Value="120" />
                 <Setter Property="WidthRequest" Value="120" />
             </Style>
-
+            
+            <!--Design du text de l'application -->
             <Style x:Key="StyleLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontSize" Value="Title" />
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
 
+            <!--Design des bouton Image-->
             <Style x:Key="StyleImage2" TargetType="ImageButton">
                 <Setter Property="HeightRequest" Value="50" />
                 <Setter Property="WidthRequest" Value="50" />
@@ -33,7 +35,7 @@
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
 
-
+            <!--Design le champ du commentaire-->
             <Style x:Key="StyleBox" TargetType="Editor">
                 <Setter Property="TextColor" Value="Black" />
                 <Setter Property="FontSize" Value="Subtitle" />
@@ -41,6 +43,7 @@
                 <Setter Property="HeightRequest" Value="100" />
             </Style>
 
+            <!--Design des bouton comme le bouton scanne par exemple-->
             <Style x:Key="LargeButton" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="#aa007f"/>
                 <Setter Property="HeightRequest" Value="60" />
@@ -87,12 +90,15 @@
 
                 </StackLayout>
 
+                <!--Réseau sociale FB-->
                 <StackLayout Grid.Row="2" Grid.Column="0">
                    
                     <!--<Label Text="Icone Réseaux sociaux" Style="{StaticResource StyleLabel}"/>-->
                     <Image Source="@drawable/fb"></Image>
                     
                 </StackLayout>
+
+                <!--Réseau sociale instat-->
                 <StackLayout Grid.Row="2" Grid.Column="1">
 
                     <!--<Label Text="Icone Réseaux sociaux" Style="{StaticResource StyleLabel}"/>-->
@@ -101,29 +107,21 @@
                    
                 </StackLayout>
 
+                <!--Réseau sociale Gmail-->
                 <StackLayout Grid.Row="2" Grid.Column="2">
 
                     <!--<Label Text="Icone Réseaux sociaux" Style="{StaticResource StyleLabel}"/>-->
-                   
                     <Image Source="@drawable/Mail"></Image>
                 </StackLayout>
 
-                <!--Grid n°2 pour le contenue de la page-->
+                <!--Champs du commentaire-->
                 <StackLayout Grid.Row="3" Grid.ColumnSpan="3">
-
-                    <!--<Label Text="Bientôt disponible!"
-                       TextColor="White" FontSize="Title"
-                        VerticalOptions="CenterAndExpand" 
-                        HorizontalOptions="CenterAndExpand">
-                        
-                    </Label>-->
-
 
                     <Editor x:Name="zoneComment" Placeholder="Laisser nous un commentaire svp " Style="{StaticResource StyleBox}"  />
 
-
                 </StackLayout>
 
+                <!--Bouton pour envoyer le commentaire -->
                 <StackLayout Grid.Row="4" Grid.ColumnSpan="3">
                         <Button x:Name="GoMessage" Text="Envoyer" Grid.Row="4" Grid.ColumnSpan="3" Clicked="Envoie_Clicked" Style="{StaticResource LargeButton}"></Button>
                 </StackLayout>

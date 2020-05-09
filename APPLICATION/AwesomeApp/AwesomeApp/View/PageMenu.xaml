@@ -12,7 +12,8 @@
     <!--Balise Style pour le design-->
     <ContentPage.Resources>
         <ResourceDictionary>
-            
+
+            <!--Design des bouton comme le bouton scanne par exemple-->
             <Style x:Key="LargeButton" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="#aa007f"/>
                 <Setter Property="HeightRequest" Value="100" />
@@ -23,6 +24,7 @@
                 <Setter Property="Margin" Value="3"/>
             </Style>
 
+            <!--design des text dans l'application(pour des label) -->
             <Style x:Key="TextMenu" TargetType="Label">
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontSize" Value="60"/>
@@ -48,10 +50,7 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="auto" />
-                <!--<RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />-->
+              
             </Grid.RowDefinitions>
                 
             <Grid.ColumnDefinitions>
@@ -60,29 +59,26 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            
+                <!--Affiche le nom de l'application -->
                 <Label Text="PhotoBooth" Grid.Row="0" Grid.ColumnSpan="3" Style="{StaticResource TextMenu}" ></Label>
 
-        
+                <!--Bouton Page Scan -->
                 <Button x:Name="GoScan" ImageSource="@mipmap/PhotosScan.ico" Grid.Row="1" Grid.ColumnSpan="3" Clicked="GoScan_Clicked" Text="Scanner"
         Style="{StaticResource LargeButton}"></Button>
 
-    
+                <!--Bouton Page Profil -->
                 <Button x:Name="GoProfil" ImageSource="@mipmap/Profile4.ico" Grid.Row="2" Grid.ColumnSpan="3" Clicked="GoProfil_Clicked" Text="Profil"
         Style="{StaticResource LargeButton}"></Button>
 
+                <!--Bouton Page Commentaire-->
                 <Button x:Name="GoEvent"  ImageSource="@drawable/Agenda3.ico"  Grid.Row="3" Grid.ColumnSpan="3"  Clicked="GoEvent_Clicked" Text="Commentaire"
         Style="{StaticResource LargeButton}"></Button>
 
+                <!--Bouton Deconnexion -->
                 <Button ImageSource="@mipmap/logout" Grid.Row="4" Grid.ColumnSpan="3" Clicked="GoDeco_Clicked" Text="Deconnexion"
         Style="{StaticResource LargeButton}" />
 
-            <!--<Button ImageSource="@mipmap/Photo3" Grid.Row="5" Grid.ColumnSpan="3"
-        Style="{StaticResource LargeButton}" />
-
-            <Button ImageSource="@mipmap/Photo3" Grid.Row="6" Grid.ColumnSpan="3"
-        Style="{StaticResource LargeButton}" />-->
-
+       
                 
         </Grid>
         </ScrollView>

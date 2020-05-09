@@ -12,7 +12,7 @@
         <ResourceDictionary>
 
 
-
+            <!--Design des bouton comme le bouton scanne par exemple-->
             <Style x:Key="LargeButton" TargetType="Button">
                 <Setter Property="BackgroundColor" Value="#aa007f"/>
                 <Setter Property="HeightRequest" Value="100" />
@@ -23,17 +23,20 @@
                 <Setter Property="Margin" Value="3"/>
             </Style>
 
+            <!--design des images de l'appli-->
             <Style x:Key="StyleImage1" TargetType="Image">
                 <Setter Property="HeightRequest" Value="120" />
                 <Setter Property="WidthRequest" Value="120" />
             </Style>
 
+            <!--design des text dans l'application(pour des label) -->
             <Style x:Key="StyleLabel" TargetType="Label">
                 <Setter Property="TextColor" Value="White" />
                 <Setter Property="FontSize" Value="Title" />
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
 
+            <!--Design des bouton avec une image-->
             <Style x:Key="StyleImage2" TargetType="ImageButton">
                 <Setter Property="HeightRequest" Value="50" />
                 <Setter Property="WidthRequest" Value="50" />
@@ -62,35 +65,33 @@
 
                 </StackLayout>
 
+                <!--Logo de la page-->
                 <StackLayout Grid.Row="1">
                     <Image Source="@drawable/PhotosScan" Style="{StaticResource StyleImage1}" ></Image>
                     <Label Text="Scanner QR code" Style="{StaticResource StyleLabel}" />
 
                 </StackLayout>
 
-            <StackLayout Grid.Row="2">
-
-
+                <!--Bouton pour lancé la fonction pour scanner le QR code-->
+                <StackLayout Grid.Row="2">
 
                     <Button x:Name="ButtonScanContinuously" Text="Scanner le QR code" Style="{StaticResource LargeButton}" ></Button>
 
-
-                    
-                
             </StackLayout>
 
+                <!--Partie pour afficher la photo ou un message d'erreur-->
                 <StackLayout Grid.Row="3">
 
-
+                    <Label x:Name="MessageError" Text="" TextColor="Red" FontSize="Medium"></Label>
                     <ContentView>
 
-                        <Image Source="{Binding ScanImage}"></Image>
+                        <Image x:Name="imagePhotoScanne" Source= ""></Image>
                         
                     </ContentView>
                     
                 </StackLayout>
 
-
+                <!--Bouton de retour à la page menu-->
                 <StackLayout Grid.Row="4">
 
                     <ImageButton Source="@drawable/Home.ico"

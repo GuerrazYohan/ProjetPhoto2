@@ -11,17 +11,13 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-
-
-
+            
+            <!--Permet de designer le champs à remplir pour se connecter-->
             <Style x:Key="EntrerLogin" TargetType="Entry">
                 <Setter Property="BackgroundColor" Value="#aa007f"/>
                 <Setter Property="HeightRequest" Value="100" />
                 <Setter Property="TextColor" Value="White" />
-                
             </Style>
-
-           
 
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -46,17 +42,20 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <StackLayout Grid.Row="0" Grid.ColumnSpan="3">
+            <StackLayout Grid.Row="0" Grid.ColumnSpan="3">
                
             </StackLayout>
 
-                <StackLayout Grid.Row="1" Grid.ColumnSpan="3">
+            <StackLayout Grid.Row="1" Grid.ColumnSpan="3">
+                
                 <Image Source="@drawable/logo.png"  HeightRequest="150" WidthRequest="150"></Image>
                 <Label Text="Bienvenue sur PhotoBooth" TextColor="White" HorizontalOptions="Center" FontSize="Title"/>
+                    
             </StackLayout>
 
-                <StackLayout Grid.Row="2" Grid.ColumnSpan="3">
-
+            <StackLayout Grid.Row="2" Grid.ColumnSpan="3">
+                
+                    <!--message erreur -->
                     <Label x:Name="MessageError" Text="" TextColor="Red" FontSize="Medium"></Label>
 
                     <!--TextBox email -->
@@ -70,10 +69,10 @@
                 
             </StackLayout>
 
-                <StackLayout Grid.Row="3" Grid.ColumnSpan="3">
+            <StackLayout Grid.Row="3" Grid.ColumnSpan="3">
                 <!--<Button x:Name="GoPageOnglet" Grid.Row="2" Text="Login" Clicked="PageOnglet_Clicked" />-->
 
-                    <!---->
+                    <!--Bouton pour se connecter à l'application-->
                     <Button x:Name="GoMenu" BackgroundColor="#aa007f" TextColor="White" CornerRadius="15" Grid.Row="2" Text="Login" Clicked="GoMenu_Clicked" />
             </StackLayout>
 

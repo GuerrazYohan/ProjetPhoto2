@@ -33,9 +33,7 @@ namespace AwesomeApp
             ((Button)sender).Text = $"You clicked {count} times.";
         }
 
-        //naviguer entre plusieur page
-
-
+        //active la fonction ReachLogin
         private void GoMenu_Clicked(object sender, EventArgs e)
         {
             ReachLogin();
@@ -44,7 +42,7 @@ namespace AwesomeApp
 
 
 
-
+        //Fonction pour vérifier que le compte existe bien dans la base de donnée et donner l'acces à l'application
         public async void ReachLogin()
         {
             List<Compte> unLog = new List<Compte>();
@@ -53,7 +51,7 @@ namespace AwesomeApp
                 try
                 {
                     HttpClient client = new HttpClient();
-                    var uri = new Uri("http://192.168.1.21/WebServiceSlim/Get/Login");
+                    var uri = new Uri("http://109.16.248.248/WebServiceSlim/Get/Login");
 
 
                     JObject oJsonObject = new JObject
