@@ -63,7 +63,7 @@ namespace AwesomeApp.View
                     await Navigation.PopModalAsync();
 
 
-                   var Action = await DisplayActionSheet("Scanned Barcode", result.Text, "Cancel", null, "Partager", "Télécharger");
+                   var Action = await DisplayActionSheet("Scanned Barcode", result.Text, "Cancel", null, "Afficher", "Télécharger");
 
                     switch (Action)
                     {
@@ -73,7 +73,7 @@ namespace AwesomeApp.View
 
                             break;
 
-                        case "Partager":
+                        case "Afficher":
 
 
                             await ReachPhoto(result.Text);
@@ -160,7 +160,7 @@ namespace AwesomeApp.View
                 }
                 else
                 {
-                    MessageError.Text = "OUPS IL SEMBLE QUE TU SOIS LE PROBLEME ";
+                    MessageError.Text = "OUPS, il semble qu'il y est un problème avec le serveur";
                 }
             }
             catch (Exception e)
@@ -171,6 +171,14 @@ namespace AwesomeApp.View
         }
 
 
+        private void BT_Share_Clic(object sender, EventArgs e)
+        {
+
+        }
+        private void BT_Download_Clic(object sender, EventArgs e)
+        {
+
+        }
 
     }
 

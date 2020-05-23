@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="#613B6D"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="AwesomeApp.View.PageInscription">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+
+            <!--Design des bouton comme le bouton scanne par exemple-->
+            <Style x:Key="LargeButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#aa007f"/>
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderRadius" Value="20"/>
+                <Setter Property="FontSize" Value="Title" />
+                <Setter Property="Padding" Value="15" />
+                <Setter Property="Margin" Value="3"/>
+            </Style>
+
+            <!--design des images de l'appli-->
+            <Style x:Key="StyleImage1" TargetType="Image">
+                <Setter Property="HeightRequest" Value="120" />
+                <Setter Property="WidthRequest" Value="120" />
+            </Style>
+
+            <!--design des text dans l'application(pour des label) -->
+            <Style x:Key="StyleLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="Title" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <!--Design des bouton avec une image-->
+            <Style x:Key="StyleImage2" TargetType="ImageButton">
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="WidthRequest" Value="50" />
+                <Setter Property="BorderColor" Value="Transparent"/>
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid Margin="16">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0">
+
+                </StackLayout>
+
+                <!--Logo de la page-->
+                <StackLayout Grid.Row="1" Grid.ColumnSpan="3">
+                    <Image Source="@drawable/Profile4.png" Style="{StaticResource StyleImage1}" ></Image>
+                    <Label Text="S'inscrire" Style="{StaticResource StyleLabel}" />
+
+                </StackLayout>
+
+                <StackLayout x:Name="EntryCompte" Grid.Row="2" Grid.ColumnSpan="3">
+
+                    <Label x:Name="MessageError" Text="" TextColor="Red" FontSize="Medium"></Label>
+
+                    <Entry x:Name="emailCompte" TextColor="White" PlaceholderColor="White" MaxLength="30"
+                       Placeholder="email"></Entry>
+
+                    <Entry x:Name="NomCompte" TextColor="White" PlaceholderColor="White" MaxLength="30"
+                       Placeholder="Nom"></Entry>
+
+                    <Entry x:Name="PrenomCompte" TextColor="White" PlaceholderColor="White" MaxLength="30"
+                       Placeholder="Prenom"></Entry>
+
+                    <Entry x:Name="PassWordCompte" TextColor="White" PlaceholderColor="White" MaxLength="30"
+                       Placeholder="Password" 
+                       IsPassword="True"></Entry>
+                </StackLayout>
+
+                <StackLayout Grid.Row="5" Grid.ColumnSpan="3">
+
+                    <Button x:Name="BT_AddCompte" Text="Créer le Compte" BackgroundColor="#aa007f" TextColor="White" CornerRadius="15" Grid.Row="2" Clicked="BT_AddCompte_Clicked"></Button>
+                    <Button x:Name="BT_Retour" Text="Retour" BackgroundColor="#aa007f" TextColor="White" CornerRadius="15" Grid.Row="2" Clicked="BT_Retour_Clicked"></Button>
+                </StackLayout>
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -58,6 +58,7 @@
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
@@ -91,8 +92,17 @@
                     
                 </StackLayout>
 
-                <!--Bouton de retour à la page menu-->
+
                 <StackLayout Grid.Row="4">
+
+                    <Button x:Name="BT_Share" Text="Partager" Style="{StaticResource LargeButton}" Clicked="BT_Share_Clic"></Button>
+                    <Button x:Name="BT_Download" Text="Télécharger" Style="{StaticResource LargeButton}" Clicked="BT_Download_Clic"></Button>
+
+                </StackLayout>
+
+
+                <!--Bouton de retour à la page menu-->
+                <StackLayout Grid.Row="5">
 
                     <ImageButton Source="@drawable/Home.ico"
                     VerticalOptions="CenterAndExpand"

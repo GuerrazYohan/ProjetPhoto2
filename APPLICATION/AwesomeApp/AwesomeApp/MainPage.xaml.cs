@@ -40,6 +40,11 @@ namespace AwesomeApp
             //Navigation.PushAsync(new PageMenu());
         }
 
+        private void GoInscription_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PageInscription());
+        }
+
 
 
         //Fonction pour vérifier que le compte existe bien dans la base de donnée et donner l'acces à l'application

@@ -19,6 +19,17 @@
                 <Setter Property="TextColor" Value="White" />
             </Style>
 
+            <!--Design des bouton comme le bouton scanne par exemple-->
+            <Style x:Key="LargeButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#aa007f"/>
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="BorderRadius" Value="20"/>
+                <Setter Property="FontSize" Value="Title" />
+                <Setter Property="Padding" Value="15" />
+                <Setter Property="Margin" Value="3"/>
+            </Style>
+
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -74,6 +85,8 @@
 
                     <!--Bouton pour se connecter à l'application-->
                     <Button x:Name="GoMenu" BackgroundColor="#aa007f" TextColor="White" CornerRadius="15" Grid.Row="2" Text="Login" Clicked="GoMenu_Clicked" />
+                    <Button x:Name="GoInscription" Text="Inscription" Clicked="GoInscription_Clicked" BackgroundColor="#aa007f" TextColor="White" CornerRadius="15" Grid.Row="2" ></Button>
+                
             </StackLayout>
 
             

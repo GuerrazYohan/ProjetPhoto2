@@ -74,30 +74,6 @@
 
 
 
-                <!--<StackLayout Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="3">
-                    <Label  Text="email :" Style="{StaticResource StyleLabel}"/>
-                    <Label x:Name="AfficheEmail" Text="{Binding Email}"  Style="{StaticResource StyleLabel}" TextColor="White"/>
-
-                </StackLayout>
-                <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.ColumnSpan="3">
-                    
-                    <Label Text="Nom :" Style="{StaticResource StyleLabel}"/>
-                    <Label x:Name="AfficheNom" 
-                           Style="{StaticResource StyleLabel}"
-                           Text="{Binding Nom, Mode=TwoWay}" TextColor="White"/>
-                    
-                </StackLayout>
-                <StackLayout Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="3">
-                
-                    <Label Text="Prenom :" Style="{StaticResource StyleLabel}"/>
-                    <Label x:Name="AffichePrenom" Text="{Binding Prenom}" TextColor="White" Style="{StaticResource StyleLabel}"/>
-              
-                </StackLayout>
-                <StackLayout Orientation="Horizontal" Grid.Row="5" Grid.ColumnSpan="3">
-                    <Label Text="Password :" Style="{StaticResource StyleLabel}"/>
-                    <Label x:Name="AffichePassword" Text="{Binding MotDePasse}" TextColor="White" Style="{StaticResource StyleLabel}"/>
-                </StackLayout>-->
-
 
 
                 <StackLayout x:Name="EntryProfil" Grid.Row="6" Grid.ColumnSpan="3">
