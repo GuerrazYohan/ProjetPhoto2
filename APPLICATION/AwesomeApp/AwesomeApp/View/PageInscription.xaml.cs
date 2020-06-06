@@ -42,29 +42,36 @@ namespace AwesomeApp.View
 
         public async void AddCompte()
         {
-            JObject oJsonObject = new JObject();
-            oJsonObject.Add("Nom", NomCompte.Text);
-            oJsonObject.Add("Prenom", PrenomCompte.Text);
-            oJsonObject.Add("Mdp", PassWordCompte.Text);
-            oJsonObject.Add("Email", emailCompte.Text);
-
-            //https://forums.xamarin.com/discussion/126833/using-httpclient-postasync-correctly
-
-            var content = new StringContent(oJsonObject.ToString(), Encoding.UTF8, "application/json");
-
-            HttpClient Profil = new HttpClient();
-            var oTaskPostAsync = await Profil.PostAsync("http://109.16.248.248/WebServiceSlim/Update/CompteWhereEmail", content);
-
-            oTaskPostAsync.StatusCode.ToString();
-
-
-            if (oTaskPostAsync.IsSuccessStatusCode)
+            if ((NomCompte.Text != null) && (PrenomCompte.Text != null) && (PassWordCompte.Text != null) && (emailCompte.Text != null) && (NomCompte.Text != "") && (PrenomCompte.Text != "") && (PassWordCompte.Text != "") && (emailCompte.Text != ""))
             {
-                await DisplayAlert("Hey! Compte Créer", "Tu peux maintenant aller te connecter", "OK");
+
+                JObject oJsonObject = new JObject();
+                oJsonObject.Add("Nom", NomCompte.Text);
+                oJsonObject.Add("Prenom", PrenomCompte.Text);
+                oJsonObject.Add("MotDePasse", PassWordCompte.Text);
+                oJsonObject.Add("Email", emailCompte.Text);
+
+
+                var content = new StringContent(oJsonObject.ToString(), Encoding.UTF8, "application/json");
+
+                HttpClient Profil = new HttpClient();
+                var oTaskPostAsync = await Profil.PostAsync("http://109.16.248.248/WebServiceSlim/Insert/Account", content);
+
+                oTaskPostAsync.StatusCode.ToString();
+
+
+                if (oTaskPostAsync.IsSuccessStatusCode)
+                {
+                    await DisplayAlert("Hey! Compte Créer", "Tu peux maintenant aller te connecter", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("Oups un problème est survenu", "Réessayer ultérieurement", "OK");
+                }
             }
             else
             {
-                await DisplayAlert("Oups un problème est survenue", "Essaye encore !!!", "OK");
+                MessageError.Text = "Veuillez remplire tout les champs";
             }
         }
 

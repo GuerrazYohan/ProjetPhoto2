@@ -78,7 +78,7 @@
 
                     <Button x:Name="ButtonScanContinuously" Text="Scanner le QR code" Style="{StaticResource LargeButton}" ></Button>
 
-            </StackLayout>
+                </StackLayout>
 
                 <!--Partie pour afficher la photo ou un message d'erreur-->
                 <StackLayout Grid.Row="3">
@@ -92,7 +92,7 @@
                     
                 </StackLayout>
 
-
+                <!--Boutons pour lancé la fonction pour partager ou télécharger la photo-->
                 <StackLayout Grid.Row="4">
 
                     <Button x:Name="BT_Share" Text="Partager" Style="{StaticResource LargeButton}" Clicked="BT_Share_Clic"></Button>

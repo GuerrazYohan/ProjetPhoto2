@@ -33,6 +33,7 @@ C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\bi
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\Mono.Android.xml
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\Xamarin.Essentials.pdb
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\bin\Debug\netstandard2.0\Xamarin.Essentials.xml
+C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.csprojAssemblyReference.cache
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.Resource1.resources
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.csproj.GenerateResource.cache
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\App.xaml.g.cs
@@ -44,7 +45,6 @@ C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\ob
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\View\PageScan.xaml.g.cs
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.AssemblyInfoInputs.cache
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.AssemblyInfo.cs
-C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.csproj.CopyComplete
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.dll
 C:\Users\Guerraz Yohan\Desktop\ProjetPhoto2\APPLICATION\AwesomeApp\AwesomeApp\obj\Debug\netstandard2.0\AwesomeApp.pdb

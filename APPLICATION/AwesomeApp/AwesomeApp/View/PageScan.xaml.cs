@@ -19,6 +19,8 @@ using System.ComponentModel;
 using AwesomeApp.Model;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
+using Plugin.DownloadManager.Abstractions;
+using Plugin.Share;
 
 namespace AwesomeApp.View
 {
@@ -31,18 +33,28 @@ namespace AwesomeApp.View
 
        ZXingBarcodeImageView pageScanner;
 
+
+        String cheminPhoto = "";
         public string result { get; set; }
-       
-  
+        public object CheminDacces { get; private set; }
+        public IDownloadFile File;
+        bool isDownloading = true;
+
         public PageScan()
         {
             InitializeComponent();
             modelScan = new PageScanViewModel();
             this.BindingContext = modelScan;
-
-
             ButtonScanContinuously.Clicked += ButtonScanContinuously_Clicked;
-            
+
+            CrossDownloadManager.Current.CollectionChanged += (sender, e) =>
+            System.Diagnostics.Debug.WriteLine(
+                "[DownloadManager]" + e.Action +
+                " -> New items: " + (e.NewItems?.Count ?? 0) +
+                " at " + e.NewStartingIndex +
+                " || Old items: " + (e.OldItems?.Count ?? 0) +
+                " at " + e.OldStartingIndex
+                );
             
         }
 
@@ -63,7 +75,7 @@ namespace AwesomeApp.View
                     await Navigation.PopModalAsync();
 
 
-                   var Action = await DisplayActionSheet("Scanned Barcode", result.Text, "Cancel", null, "Afficher", "Télécharger");
+                   var Action = await DisplayActionSheet("Scanned Barcode", result.Text, "Cancel", null, "Afficher");
 
                     switch (Action)
                     {
@@ -75,16 +87,10 @@ namespace AwesomeApp.View
 
                         case "Afficher":
 
-
                             await ReachPhoto(result.Text);
-                            //await ShareUri(result.Text);
-
+                           
                             break;
-                        case "Télécharger":
-
-                             DownloadFile(result.Text);
-
-                            break;
+                       
 
                     }
 
@@ -99,6 +105,8 @@ namespace AwesomeApp.View
         //Fonction pour partager un fichier
         public async Task ShareUri(string uri)
         {
+
+
             await Share.RequestAsync(new ShareTextRequest
             {
                 Uri = uri,
@@ -107,12 +115,68 @@ namespace AwesomeApp.View
         }
 
         //Fonction pour télécharger un fichier
-        public void DownloadFile(string address)
+        public async void DownloadFile(string address)
         {
-            WebClient client = new WebClient();
-            string reply = client.DownloadString(address);
+            //WebClient client = new WebClient();
+            //string reply = client.DownloadString(address);
+            //Console.WriteLine(reply);
 
-            Console.WriteLine(reply);
+            await Task.Yield();
+            //UserDialogs.Instance.ShowLoading("Downloading...",MaskType.Black);
+            //await Navigation.PushPopupAsync(new PageScan());
+            await Task.Run(() =>
+           {
+
+               var downloadManager = CrossDownloadManager.Current;
+               var file = downloadManager.CreateDownloadFile(address);
+               downloadManager.Start(file, true);
+
+               while (isDownloading)
+               {
+                   //await Task.Delay(10*200);
+                   isDownloading = IsDownloading(file);
+               }
+
+           });
+            //UserDialogs.Instance.HideLoading();
+            //await Navigation.PopAllPopupAsync();
+            if (!isDownloading) 
+            {
+                await DisplayAlert("File Status" , "File Downloded" , "OK");
+                //DependencyService.Get<IToast>().ShowToast("Your file has");
+            }
+            
+        }
+
+        public bool IsDownloading(IDownloadFile File)
+        {
+            //if(TotalBytewritten== File.TotalBytesWritten && File.TotalBytesWritten!=0)
+            //{ 
+            //  return false;
+            //}
+            //TotalBytewritten = File.TotalBytesWritten;
+            if (File == null) return false;
+            switch (File.Status)
+            {
+                case DownloadFileStatus.INITIALIZED:
+                case DownloadFileStatus.PAUSED:
+                case DownloadFileStatus.PENDING:
+                case DownloadFileStatus.RUNNING:
+                    //DependencyService.Get<IToast>().ShowToast();
+                    return true;
+
+                case DownloadFileStatus.COMPLETED:
+                case DownloadFileStatus.CANCELED:
+                case DownloadFileStatus.FAILED:
+                    return false;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        public void AbortDownloading()
+        {
+            CrossDownloadManager.Current.Abort(File);
         }
 
         //retour à la page menu
@@ -150,7 +214,8 @@ namespace AwesomeApp.View
                         unLog = JsonConvert.DeserializeObject<List<Photo>>(content);
                         MessageError.Text = null;
                         Xamarin.Forms.Application.Current.Properties["resultatscanning"] = unLog[0].CheminDacces;
-                        imagePhotoScanne.Source = ImageSource.FromUri(new Uri("http://109.16.248.248" + unLog[0].CheminDacces));
+                        cheminPhoto = "http://109.16.248.248" + unLog[0].CheminDacces;
+                        imagePhotoScanne.Source = ImageSource.FromUri(new Uri(cheminPhoto));
                   
                     }
                     else
@@ -171,13 +236,14 @@ namespace AwesomeApp.View
         }
 
 
-        private void BT_Share_Clic(object sender, EventArgs e)
+        private async void BT_Share_Clic(object sender, EventArgs e)
         {
+            await ShareUri(cheminPhoto);
 
         }
         private void BT_Download_Clic(object sender, EventArgs e)
-        {
-
+        { 
+           DownloadFile(cheminPhoto);
         }
 
     }

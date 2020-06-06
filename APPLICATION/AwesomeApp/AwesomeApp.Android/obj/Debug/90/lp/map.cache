@@ -3,11 +3,7 @@ FastAndroidCamera
 FormsViewGroup
 Plugin.DownloadManager
 Rg.Plugins.Popup
-SQLitePCLRaw.batteries_green
-SQLitePCLRaw.batteries_v2
-SQLitePCLRaw.core
-SQLitePCLRaw.lib.e_sqlite3
-SQLitePCLRaw.provider.e_sqlite3
+SQLitePCLRaw.lib.e_sqlite3.android
 Symbol.XamarinEMDK
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
@@ -51,3 +47,5 @@ Xamarin.Forms.Platform.Android
 Xamarin.Forms.Platform
 ZXing.Net.Mobile.Forms.Android
 ZXingNetMobile
+Plugin.CurrentActivity
+Plugin.Share
